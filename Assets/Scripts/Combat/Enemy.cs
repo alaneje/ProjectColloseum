@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Health = EnemyProfile.Health;
+       // Health = EnemyProfile.Health;
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
 
     public void EndLife()
     {
-        if(Health.x < 1)
+        if(EnemyProfile.Health.x < 1)
         {
            // this.gameObject.tag = "NOENEMY";
             this.gameObject.SetActive(false);
@@ -34,6 +34,11 @@ public class Enemy : MonoBehaviour
 
     public void GenerateTurnDecisions()
     {
-        MyTargetData.Target = combatManager.Maya.gameObject;//temporary, will need to change but default targets Maya.
+        MyTargetData.Target = combatManager.PlayerCombatants[0].gameObject;//temporary, will need to change but default targets Maya.
+    }
+
+    public void ApplyDamage(int Damage)
+    {
+        EnemyProfile.Health.x -= Damage;
     }
 }

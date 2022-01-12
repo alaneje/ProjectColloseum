@@ -8,11 +8,12 @@ public class CombatManager : MonoBehaviour
     public enum TurnPahses {PreTurn,TurnAbility, PostTurn}
     public TurnPahses CurrentTurnPhase;
     public Archive Ark;
-    public CombatPlayer Maya;
+    public CombatPlayer[] PlayerCombatants;
     public Enemy[] Enemies;
     public CombatantTurnSubmission[] TurnCombatants;
+    public int CurrentPlayer;
     public int CurrentTarget;
-    public int CurrentStackPos;
+   // public int CurrentStackPos;
     public int CurrentTurn;
 
     [Header("MiscObjects")]
@@ -21,7 +22,7 @@ public class CombatManager : MonoBehaviour
     public GameObject GameOverScreen;
 
     [Header("UI Elements")]
-    public Text StacksRemainingCountText;
+   // public Text StacksRemainingCountText;
     public Text PlayerHealthText;
 
     bool InTurnGameplay;
@@ -30,6 +31,7 @@ public class CombatManager : MonoBehaviour
     void Start()
     {
         GenerateEnemyList();
+        GeneratePlayerList();
         GenerateTurnOrder();
         GameObject x = GameObject.Find("Archive");
         Ark = x.GetComponent<Archive>();
@@ -53,7 +55,6 @@ public class CombatManager : MonoBehaviour
 
     void CombatUI()
     {
-       StacksRemainingCountText.text = "" + (CurrentStackPos + 1) + "/" + (Maya.StackCount + 1);
         PlayerHealthText.text = "Maya: " + Ark.Party[0].Health.x + "/" + Ark.Party[0].Health.y;
     }
 
@@ -97,7 +98,10 @@ public class CombatManager : MonoBehaviour
             Enemies[i].EndLife();
             i++;
         }//Check if any enemies died this turn. 
-        if(Ark.Party[0].Health.x < 1)
+
+        GameObject[] E = GameObject.FindGameObjectsWithTag("Player");
+
+        if (E.Length < 1)
         {
             GameOverScreen.SetActive(true);
         }
@@ -111,16 +115,8 @@ public class CombatManager : MonoBehaviour
     void TargettingArrowPositionUpdate()
     {
         TargetingArrow.transform.position = new Vector3(Enemies[CurrentTarget].gameObject.transform.position.x, TargetingArrow.transform.position.y, Enemies[CurrentTarget].gameObject.transform.position.z);
-
-        int i = 0;
-        while(i != Maya.Stacks.Length)
-        {
-            if (!Maya.Stacks[i].Selected)
-            {
-                Maya.Stacks[i].Target = Enemies[CurrentTarget].gameObject; 
-            }
-            i++;
-        }
+        PlayerCombatants[CurrentPlayer].Submission.Target = Enemies[CurrentTarget].gameObject; 
+     
 
       
     }//Updates where the targetting arrow is positioned based on the current target.
@@ -133,6 +129,18 @@ public class CombatManager : MonoBehaviour
         while (i != Enemies.Length)
         {
             Enemies[i] = E[i].GetComponent<Enemy>();
+            i++;
+        }
+    }
+
+    void GeneratePlayerList()
+    {
+        GameObject[] E = GameObject.FindGameObjectsWithTag("Player");
+        PlayerCombatants = new CombatPlayer[E.Length];
+        int i = 0;
+        while (i != PlayerCombatants.Length)
+        {
+            PlayerCombatants[i] = E[i].GetComponent<CombatPlayer>();
             i++;
         }
     }
@@ -155,23 +163,19 @@ public class CombatManager : MonoBehaviour
 
     public void UseAbility(int ButtonNumber)
     {
-        Maya.Stacks[CurrentStackPos].AbilityNumber = 0;
-        Maya.Stacks[CurrentStackPos].Target = Enemies[CurrentTarget].gameObject;
-        Maya.Stacks[CurrentStackPos].Selected = true;
+        PlayerCombatants[CurrentPlayer].Submission.AbilityNumber = 0;
+        PlayerCombatants[CurrentPlayer].Submission.Target = Enemies[CurrentTarget].gameObject;
 
-        if (CurrentStackPos == Maya.StackCount)
+        if((CurrentPlayer + 1) == PlayerCombatants.Length)
         {
             StartTurns();
         }
-       
-
-        CurrentStackPos++;
-
+        else
+        {
+            CurrentPlayer++;
+        }
+      //  Maya.Stacks[CurrentStackPos].Selected = true;
         
-
-        
-
-
 
     }
 
@@ -190,17 +194,12 @@ public class CombatManager : MonoBehaviour
         }
         else
         {
-            int i = 0;
-            while (i != Maya.Stacks.Length)
-            {
-
-                Maya.Stacks[i].Selected = false;
-                
-                i++;
-            }
-            CurrentStackPos = 0;
+            
+           
             CurrentTurn = 0;
             GenerateEnemyList();
+            GeneratePlayerList();
+            CurrentTarget = 0;
             InTurnGameplay = false;
         }
     }//At the end of each Turn operates final turn cleanup protocals. 

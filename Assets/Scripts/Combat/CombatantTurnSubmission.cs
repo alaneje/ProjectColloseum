@@ -5,7 +5,6 @@ using UnityEngine;
 public class CombatantTurnSubmission : MonoBehaviour
 {
 
-    public bool Selected;
     public int SpeedValue;
     public int AbilityNumber;
     public GameObject Target;

@@ -26,16 +26,12 @@ public class TempTestAbilityScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Test");
-        Enemy enex = other.gameObject.GetComponent<Enemy>();
+        CombatProfile enex = other.gameObject.GetComponent<CombatProfile>();
 
         if(enex != null)
         {
             enex.Health.x -= 10;
         }
-        else //means it's attacking the player
-        {
-            CombatManager CM = GameObject.FindObjectOfType<CombatManager>();
-            CM.Ark.Party[0].Health.x -= 10;
-        }
+        
     }
 }

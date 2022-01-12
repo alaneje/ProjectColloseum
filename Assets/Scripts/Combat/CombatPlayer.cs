@@ -5,36 +5,30 @@ using UnityEngine;
 public class CombatPlayer : MonoBehaviour
 {
 
-    public CombatantTurnSubmission[] Stacks;
+    public CombatantTurnSubmission Submission;
+    public CombatProfile MyProfile;
     public int StackCount;
+
+   
     // Start is called before the first frame update
     void Start()
     {
-        StackState();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        StackState();
+        EndLife();
     }
 
-    void StackState()
+    public void EndLife()
     {
-        int i = 0;
-        Debug.Log("Receiving");
-        while(i != Stacks.Length)
+        if (MyProfile.Health.x < 1)
         {
-            if(i <= StackCount)
-            {
-                Stacks[i].gameObject.SetActive(true);
-            }
-            else
-            {
-                Stacks[i].gameObject.SetActive(false);
-            }
-
-            i++;
+            // this.gameObject.tag = "NOENEMY";
+            this.gameObject.SetActive(false);
         }
     }
+
 }
