@@ -278,7 +278,7 @@ public class CombatManager : MonoBehaviour
             }
             i++;
         }
-    }
+    }//Build the enemy combatants from the scenario
 
     void BuildPlayerCombatants()
     {
@@ -311,7 +311,7 @@ public class CombatManager : MonoBehaviour
             }
             i++;
         }
-    }
+    }//Build the player combatants from the scenario
 
 
     public void EndAbilitySegment(int Delay)
