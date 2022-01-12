@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8243652191363338836}
   - component: {fileID: -2426518637492781498}
   m_Layer: 0
-  m_Name: TestAbility
+  m_Name: TestAbility-Blam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,13 +49,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6721cfbca8c77478875ef88df18636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AbilityName: 
-  Magic: 0
-  AbilityAttribute: 0
+  AbilityName: Blam
+  Magic: 1
+  AbilityAttribute: 5
   abilityType: 1
   Power: 10
   MagicAttack: 0
   PhysicalAttack: 0
+  AttributesCarried: 
 --- !u!33 &5552707838592899168
 MeshFilter:
   m_ObjectHideFlags: 0

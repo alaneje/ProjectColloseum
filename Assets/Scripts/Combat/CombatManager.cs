@@ -20,10 +20,13 @@ public class CombatManager : MonoBehaviour
     public GameObject TargetingArrow;
     public GameObject CombatUIPannel;
     public GameObject GameOverScreen;
+    public GameObject VictoryScreen;
 
     [Header("UI Elements")]
    // public Text StacksRemainingCountText;
     public Text PlayerHealthText;
+    public Button[] AbilityButtons;
+    public Text[] AbilityButtonText;
 
     bool InTurnGameplay;
     bool InTurnAbilityLock;
@@ -55,7 +58,26 @@ public class CombatManager : MonoBehaviour
 
     void CombatUI()
     {
+        
         PlayerHealthText.text = "Maya: " + PlayerCombatants[CurrentPlayer].MyProfile.Health.x + "/" + PlayerCombatants[CurrentPlayer].MyProfile.Health.y;
+
+
+        int i = 0;
+        while(i != AbilityButtons.Length)
+        {
+            if(i !<= PlayerCombatants[CurrentPlayer].MyProfile.SkillList.Length - 1)
+            {
+                int A = PlayerCombatants[CurrentPlayer].MyProfile.SkillList[i];//Get ability number from the list
+                AbilityButtons[i].interactable = true;
+                AbilityButtonText[i].text = Ark.CombatAbilities[A].AbilityName;
+            }
+            else
+            {
+                AbilityButtons[i].interactable = false;
+                AbilityButtonText[i].text = "";
+            }
+            i++;
+        }
     }
 
     void TurnUpdates()
@@ -99,16 +121,23 @@ public class CombatManager : MonoBehaviour
             i++;
         }//Check if any enemies died this turn. 
 
-        GameObject[] E = GameObject.FindGameObjectsWithTag("Player");
 
+        GameObject[] E = GameObject.FindGameObjectsWithTag("Player");
+        GameObject[] P = GameObject.FindGameObjectsWithTag("Enemy");
         if (E.Length < 1)
         {
             GameOverScreen.SetActive(true);
+        }
+        else if (P.Length < 1)
+        {
+            VictoryScreen.SetActive(true);
         }
         else
         {
             EndOfTurn();
         }
+
+
         
     }
 
