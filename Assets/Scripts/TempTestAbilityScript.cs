@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TempTestAbilityScript : MonoBehaviour
 {
-
+    public CombatAbilityProfile MyProfile;
     float Timer = 2;
     // Start is called before the first frame update
     void Start()
@@ -30,7 +30,14 @@ public class TempTestAbilityScript : MonoBehaviour
 
         if(enex != null)
         {
-            enex.Health.x -= 10;
+            if (MyProfile.Magic)
+            {
+                enex.TakeDamage(MyProfile.Power + MyProfile.MagicAttack);
+            }
+            else
+            {
+                enex.TakeDamage(MyProfile.Power + MyProfile.PhysicalAttack);
+            }
         }
         
     }

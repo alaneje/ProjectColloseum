@@ -181,7 +181,10 @@ public class CombatManager : MonoBehaviour
 
     void GenerateTurnAbility()
     {       
-        Instantiate(Ark.CombatAbilities[TurnCombatants[CurrentTurn].AbilityNumber].gameObject, TurnCombatants[CurrentTurn].Target.transform.position,Quaternion.identity);
+        CombatAbilityProfile A = Instantiate(Ark.CombatAbilities[TurnCombatants[CurrentTurn].AbilityNumber].gameObject, TurnCombatants[CurrentTurn].Target.transform.position,Quaternion.identity).GetComponent<CombatAbilityProfile>();
+        A.PhysicalAttack = TurnCombatants[CurrentTurn].gameObject.GetComponent<CombatProfile>().Attack;
+        A.MagicAttack = TurnCombatants[CurrentTurn].gameObject.GetComponent<CombatProfile>().Resonance;
+
         InTurnAbilityLock = true;
     }//spawns the ability object on the current target of whoevers turn it is.
 

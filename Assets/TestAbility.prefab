@@ -50,8 +50,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityName: 
+  Magic: 0
   AbilityAttribute: 0
   abilityType: 1
+  Power: 10
+  MagicAttack: 0
+  PhysicalAttack: 0
 --- !u!33 &5552707838592899168
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -113,6 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 544f3d8b11e2b114f8ff87a170bd74e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MyProfile: {fileID: 6308638393367835582}
 --- !u!114 &6559821765621809441
 MonoBehaviour:
   m_ObjectHideFlags: 0
