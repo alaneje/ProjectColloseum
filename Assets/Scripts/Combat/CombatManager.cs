@@ -30,14 +30,23 @@ public class CombatManager : MonoBehaviour
 
     bool InTurnGameplay;
     bool InTurnAbilityLock;
+
+    private void Awake()
+    {
+        
+    }
     // Start is called before the first frame update
     void Start()
     {
+        SceneMaster.SetActiveScene(this.gameObject.scene);
+        GameObject x = GameObject.Find("Archive");
+        Ark = x.GetComponent<Archive>();
+        BuildPlayerCombatants();
+        BuildEnemyCombatants();
         GenerateEnemyList();
         GeneratePlayerList();
         GenerateTurnOrder();
-        GameObject x = GameObject.Find("Archive");
-        Ark = x.GetComponent<Archive>();
+       
     }
 
     // Update is called once per frame
@@ -58,8 +67,8 @@ public class CombatManager : MonoBehaviour
 
     void CombatUI()
     {
-        
-        PlayerHealthText.text = "Maya: " + PlayerCombatants[CurrentPlayer].MyProfile.Health.x + "/" + PlayerCombatants[CurrentPlayer].MyProfile.Health.y;
+        string Name = PlayerCombatants[CurrentPlayer].MyProfile.Name;
+        PlayerHealthText.text = Name + PlayerCombatants[CurrentPlayer].MyProfile.Health.x + "/" + PlayerCombatants[CurrentPlayer].MyProfile.Health.y;
 
 
         int i = 0;
@@ -238,6 +247,73 @@ public class CombatManager : MonoBehaviour
         }
     }//At the end of each Turn operates final turn cleanup protocals. 
 
+    void BuildEnemyCombatants()
+    {
+        CombatScenario CS = Ark.gameObject.GetComponent<CombatScenario>();
+        GameObject[] E = GameObject.FindGameObjectsWithTag("Enemy");
+        int i = 0;
+        while(i != E.Length)
+        {
+            if(i + 1 !<= CS.EnemyCombatants.Length)
+            {
+                E[i].gameObject.SetActive(true);
+                CombatProfile CX = E[i].GetComponent<CombatProfile>();
+                CX.Name = Ark.EnemyCombatants[CS.EnemyCombatants[i]].Name;
+                CX.Health = Ark.EnemyCombatants[CS.EnemyCombatants[i]].Health;
+                CX.Magic = Ark.EnemyCombatants[CS.EnemyCombatants[i]].Magic;
+                CX.Attack = Ark.EnemyCombatants[CS.EnemyCombatants[i]].Attack;
+                CX.Resonance = Ark.EnemyCombatants[CS.EnemyCombatants[i]].Resonance;
+                CX.Defence = Ark.EnemyCombatants[CS.EnemyCombatants[i]].Defence;
+                CX.Constitution = Ark.EnemyCombatants[CS.EnemyCombatants[i]].Constitution;
+                CX.Evasion = Ark.EnemyCombatants[CS.EnemyCombatants[i]].Evasion;
+                CX.Accuracy = Ark.EnemyCombatants[CS.EnemyCombatants[i]].Accuracy;
+                CX.PositiveAttribute = Ark.EnemyCombatants[CS.EnemyCombatants[i]].PositiveAttribute;
+                CX.NegativeAttribute = Ark.EnemyCombatants[CS.EnemyCombatants[i]].NegativeAttribute;
+                CX.SkillList = Ark.EnemyCombatants[CS.EnemyCombatants[i]].SkillList;
+
+            }
+            else
+            {
+                E[i].gameObject.SetActive(false);
+            }
+            i++;
+        }
+    }
+
+    void BuildPlayerCombatants()
+    {
+        CombatScenario CS = Ark.gameObject.GetComponent<CombatScenario>();
+        GameObject[] E = GameObject.FindGameObjectsWithTag("Player");
+        int i = 0;
+        while (i != E.Length)
+        {
+            if (i + 1! <= CS.PlayerCombatants.Length)
+            {
+                E[i].gameObject.SetActive(true);
+                CombatProfile CX = E[i].GetComponent<CombatProfile>();
+                CX.Name = Ark.Combatants[CS.PlayerCombatants[i]].Name;
+                CX.Health = Ark.Combatants[CS.PlayerCombatants[i]].Health;
+                CX.Magic = Ark.Combatants[CS.PlayerCombatants[i]].Magic;
+                CX.Attack = Ark.Combatants[CS.PlayerCombatants[i]].Attack;
+                CX.Resonance = Ark.Combatants[CS.PlayerCombatants[i]].Resonance;
+                CX.Defence = Ark.Combatants[CS.PlayerCombatants[i]].Defence;
+                CX.Constitution = Ark.Combatants[CS.PlayerCombatants[i]].Constitution;
+                CX.Evasion = Ark.Combatants[CS.PlayerCombatants[i]].Evasion;
+                CX.Accuracy = Ark.Combatants[CS.PlayerCombatants[i]].Accuracy;
+                CX.PositiveAttribute = Ark.Combatants[CS.PlayerCombatants[i]].PositiveAttribute;
+                CX.NegativeAttribute = Ark.Combatants[CS.PlayerCombatants[i]].NegativeAttribute;
+                CX.SkillList = Ark.Combatants[CS.PlayerCombatants[i]].SkillList;
+
+            }
+            else
+            {
+                E[i].gameObject.SetActive(false);
+            }
+            i++;
+        }
+    }
+
+
     public void EndAbilitySegment(int Delay)
     {
         Debug.Log("Pinging end of ability segment with a delay of " + Delay);
@@ -245,4 +321,5 @@ public class CombatManager : MonoBehaviour
         InTurnAbilityLock = false;
         BeginPostTurn();
     }
+
 }

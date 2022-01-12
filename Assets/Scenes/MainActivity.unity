@@ -123,6 +123,174 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &168741818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 168741819}
+  - component: {fileID: 168741821}
+  m_Layer: 0
+  m_Name: Combatant (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &168741819
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168741818}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1474914345}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &168741821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168741818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f27cc28e786174fa45f26a33787450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
+  PositiveAttribute: 
+  NegativeAttribute: 
+  SkillList: 
+--- !u!1 &248349574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 248349575}
+  - component: {fileID: 248349577}
+  m_Layer: 0
+  m_Name: Combatant (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &248349575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248349574}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1474914345}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &248349577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248349574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f27cc28e786174fa45f26a33787450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
+  PositiveAttribute: 
+  NegativeAttribute: 
+  SkillList: 
+--- !u!1 &367503039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 367503040}
+  - component: {fileID: 367503042}
+  m_Layer: 0
+  m_Name: Combatant (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &367503040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367503039}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1474914345}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &367503042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367503039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f27cc28e786174fa45f26a33787450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
+  PositiveAttribute: 
+  NegativeAttribute: 
+  SkillList: 
 --- !u!1 &611041814
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,9 +301,8 @@ GameObject:
   m_Component:
   - component: {fileID: 611041815}
   - component: {fileID: 611041816}
-  - component: {fileID: 611041817}
   m_Layer: 0
-  m_Name: Fae0
+  m_Name: Combatant (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,38 +334,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f27cc28e786174fa45f26a33787450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Derek
   Health: {x: 69, y: 69}
-  Magic: {x: 52, y: 52}
-  Attack: 32
-  Resonance: 0
-  Defence: 23
-  Constitution: 0
-  Speed: 32
-  Accuracy: 65
-  Evasion: 45
-  PositiveAttribute: 0100000000000000
-  NegativeAttribute: 0200000000000000
-  SkillList: 000000000000000000000000
---- !u!114 &611041817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 611041814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6721cfbca8c77478875ef88df18636, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityName: 
-  Magic: 0
-  AbilityAttribute: 0
-  abilityType: 0
-  Power: 0
-  MagicAttack: 0
-  PhysicalAttack: 0
-  AttributesCarried: 
+  Magic: {x: 0, y: 0}
+  Attack: 62
+  Resonance: 20
+  Defence: 20
+  Constitution: 20
+  Speed: 20
+  Accuracy: 20
+  Evasion: 20
+  PositiveAttribute: 0700000008000000
+  NegativeAttribute: 0100000005000000
+  SkillList: 0000000001000000
 --- !u!1 &709813712
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,7 +358,7 @@ GameObject:
   - component: {fileID: 709813713}
   - component: {fileID: 709813714}
   m_Layer: 0
-  m_Name: Maya
+  m_Name: Combatant0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -242,17 +390,130 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f27cc28e786174fa45f26a33787450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Gareth
   Health: {x: 69, y: 69}
-  Magic: {x: 69, y: 69}
-  Attack: 45
+  Magic: {x: 0, y: 0}
+  Attack: 62
+  Resonance: 20
+  Defence: 20
+  Constitution: 20
+  Speed: 20
+  Accuracy: 20
+  Evasion: 20
+  PositiveAttribute: 0700000008000000
+  NegativeAttribute: 0100000005000000
+  SkillList: 00000000010000000100000000000000
+--- !u!1 &715652332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 715652333}
+  - component: {fileID: 715652335}
+  m_Layer: 0
+  m_Name: Combatant (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &715652333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715652332}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1474914345}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &715652335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715652332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f27cc28e786174fa45f26a33787450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
   Resonance: 0
-  Defence: 54
+  Defence: 0
   Constitution: 0
-  Speed: 45
-  Accuracy: 12
-  Evasion: 21
-  PositiveAttribute: 0000000000000000
-  NegativeAttribute: 0000000000000000
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
+  PositiveAttribute: 
+  NegativeAttribute: 
+  SkillList: 
+--- !u!1 &765881134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 765881135}
+  - component: {fileID: 765881137}
+  m_Layer: 0
+  m_Name: Combatant (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &765881135
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765881134}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1474914345}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &765881137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765881134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f27cc28e786174fa45f26a33787450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
+  PositiveAttribute: 
+  NegativeAttribute: 
   SkillList: 
 --- !u!1 &1181927586
 GameObject:
@@ -264,6 +525,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1181927587}
   - component: {fileID: 1181927588}
+  - component: {fileID: 1181927589}
   m_Layer: 0
   m_Name: Archive
   m_TagString: Untagged
@@ -298,12 +560,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7c7eb67c17b9a847a0de3b32edc6c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Party:
+  Combatants:
   - {fileID: 709813714}
   - {fileID: 611041816}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 765881137}
+  - {fileID: 1359328224}
+  - {fileID: 1794179348}
+  - {fileID: 1827963606}
+  - {fileID: 367503042}
+  - {fileID: 715652335}
+  - {fileID: 168741821}
+  - {fileID: 248349577}
   CombatAbilities:
   - {fileID: 6308638393367835582, guid: d687d59db11d0de4db567c247178980e, type: 3}
   - {fileID: 6308638393367835582, guid: 1f8d143445b7b9246b0d41e2b57e4b52, type: 3}
@@ -315,6 +582,78 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  EnemyCombatants:
+  - {fileID: 6852962140020638021, guid: 5191aff0be850724ca28b3ad8929f166, type: 3}
+--- !u!114 &1181927589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181927586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c002f18b49d454c8bcd1f09fcfb435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerCombatants: 0000000001000000
+  EnemyCombatants: 000000000000000000000000
+--- !u!1 &1359328221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1359328222}
+  - component: {fileID: 1359328224}
+  m_Layer: 0
+  m_Name: Combatant (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1359328222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359328221}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1474914345}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1359328224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359328221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f27cc28e786174fa45f26a33787450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
+  PositiveAttribute: 
+  NegativeAttribute: 
+  SkillList: 
 --- !u!1 &1474914344
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1474914345}
   m_Layer: 0
-  m_Name: Party
+  m_Name: Combatant Storage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -344,9 +683,129 @@ Transform:
   m_Children:
   - {fileID: 709813713}
   - {fileID: 611041815}
+  - {fileID: 765881135}
+  - {fileID: 1359328222}
+  - {fileID: 1794179346}
+  - {fileID: 1827963604}
+  - {fileID: 367503040}
+  - {fileID: 715652333}
+  - {fileID: 168741819}
+  - {fileID: 248349575}
   m_Father: {fileID: 1181927587}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1794179345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1794179346}
+  - component: {fileID: 1794179348}
+  m_Layer: 0
+  m_Name: Combatant (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1794179346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794179345}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1474914345}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1794179348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794179345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f27cc28e786174fa45f26a33787450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
+  PositiveAttribute: 
+  NegativeAttribute: 
+  SkillList: 
+--- !u!1 &1827963603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1827963604}
+  - component: {fileID: 1827963606}
+  m_Layer: 0
+  m_Name: Combatant (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1827963604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827963603}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1474914345}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1827963606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827963603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f27cc28e786174fa45f26a33787450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
+  PositiveAttribute: 
+  NegativeAttribute: 
+  SkillList: 
 --- !u!1 &1834397205
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class AndroidTestRoomLoading : MonoBehaviour
         if(Application.platform == RuntimePlatform.Android && Debug.isDebugBuild)
         {
             SceneManager.LoadSceneAsync(ScenenNumber, LoadSceneMode.Additive);
+            
         }
     }
 

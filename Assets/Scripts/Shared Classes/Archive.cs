@@ -5,12 +5,12 @@ using UnityEngine;
 public class Archive : MonoBehaviour
 {
     public enum Attribute {Null, Fire, Water, Earth, Air, Ether, Corrupted, Pierce, Slice, Blunt}
-    [Header("Party")]
-    public CombatProfile[] Party;
+    [Header("Player Objects")]
+    public CombatProfile[] Combatants;
 
     [Header("General")]
     public CombatAbilityProfile[] CombatAbilities;
-  
+    public CombatProfile[] EnemyCombatants;
     //[Header("Party")]
    // public FaeCompaion Fae;
 }
