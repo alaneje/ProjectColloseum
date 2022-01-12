@@ -14,6 +14,7 @@ public class CombatAbilityProfile : MonoBehaviour
     [Header("Carry Storage")]
     public int MagicAttack;
     public int PhysicalAttack;
+    public Archive.Attribute[] AttributesCarried;
 
     // Start is called before the first frame update
     void Start()

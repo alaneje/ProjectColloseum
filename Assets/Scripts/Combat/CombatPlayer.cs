@@ -7,7 +7,7 @@ public class CombatPlayer : MonoBehaviour
 
     public CombatantTurnSubmission Submission;
     public CombatProfile MyProfile;
-    public int StackCount;
+   // public int StackCount;
 
    
     // Start is called before the first frame update

@@ -652,7 +652,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Submission: {fileID: 641109500}
   MyProfile: {fileID: 641109504}
-  StackCount: 2
 --- !u!114 &641109504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,13 +666,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: {x: 69, y: 69}
   Magic: {x: 0, y: 0}
-  Attack: 0
-  Defence: 0
-  Speed: 0
-  Accuracy: 0
-  Evasion: 0
-  PositiveAttribute: 
-  NegativeAttribute: 
+  Attack: 62
+  Resonance: 20
+  Defence: 20
+  Constitution: 20
+  Speed: 20
+  Accuracy: 20
+  Evasion: 20
+  PositiveAttribute: 0700000008000000
+  NegativeAttribute: 0100000005000000
   SkillList: 
 --- !u!1 &679696149
 GameObject:
@@ -2070,13 +2071,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: {x: 69, y: 69}
   Magic: {x: 0, y: 0}
-  Attack: 0
-  Defence: 0
-  Speed: 0
-  Accuracy: 0
-  Evasion: 0
-  PositiveAttribute: 
-  NegativeAttribute: 
+  Attack: 62
+  Resonance: 20
+  Defence: 20
+  Constitution: 20
+  Speed: 20
+  Accuracy: 20
+  Evasion: 20
+  PositiveAttribute: 0700000008000000
+  NegativeAttribute: 0100000005000000
   SkillList: 
 --- !u!114 &1294660403
 MonoBehaviour:
@@ -2092,7 +2095,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Submission: {fileID: 1294660400}
   MyProfile: {fileID: 1294660402}
-  StackCount: 2
 --- !u!4 &1294660404
 Transform:
   m_ObjectHideFlags: 0
@@ -2382,7 +2384,9 @@ MonoBehaviour:
   Health: {x: 69, y: 69}
   Magic: {x: 0, y: 0}
   Attack: 20
+  Resonance: 0
   Defence: 20
+  Constitution: 0
   Speed: 20
   Accuracy: 20
   Evasion: 20
@@ -2668,7 +2672,9 @@ MonoBehaviour:
   Health: {x: 69, y: 69}
   Magic: {x: 0, y: 0}
   Attack: 20
+  Resonance: 0
   Defence: 20
+  Constitution: 0
   Speed: 20
   Accuracy: 20
   Evasion: 20
@@ -2916,7 +2922,9 @@ MonoBehaviour:
   Health: {x: 20, y: 69}
   Magic: {x: 0, y: 0}
   Attack: 20
+  Resonance: 0
   Defence: 20
+  Constitution: 0
   Speed: 20
   Accuracy: 20
   Evasion: 20

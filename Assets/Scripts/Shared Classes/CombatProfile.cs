@@ -20,9 +20,17 @@ public class CombatProfile : MonoBehaviour
     [Header("Abilities")]
     public int[] SkillList;
 
-    public void TakeDamage(int Damage)
+    public void TakeDamage(int Damage, bool Magic, Archive.Attribute[] Attributes)
     {
-        Health.x -= Damage;
+        if (Magic)
+        {
+            Health.x -= Damage - (Resonance + 1);
+        }
+        else
+        {
+            Health.x -= Damage - (Defence + 1);
+        }
+        
     }
 
 }

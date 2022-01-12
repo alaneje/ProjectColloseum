@@ -6,8 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public CombatProfile EnemyProfile;
     public CombatantTurnSubmission MyTargetData;
-    public Vector2Int Health;
-
+  
     [Header("LinkData")]
     public CombatManager combatManager;
 
