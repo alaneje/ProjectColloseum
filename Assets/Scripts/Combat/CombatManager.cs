@@ -55,7 +55,7 @@ public class CombatManager : MonoBehaviour
 
     void CombatUI()
     {
-        PlayerHealthText.text = "Maya: " + Ark.Party[0].Health.x + "/" + Ark.Party[0].Health.y;
+        PlayerHealthText.text = "Maya: " + PlayerCombatants[CurrentPlayer].MyProfile.Health.x + "/" + PlayerCombatants[CurrentPlayer].MyProfile.Health.y;
     }
 
     void TurnUpdates()
@@ -197,6 +197,7 @@ public class CombatManager : MonoBehaviour
             
            
             CurrentTurn = 0;
+            CurrentPlayer = 0;
             GenerateEnemyList();
             GeneratePlayerList();
             CurrentTarget = 0;

@@ -34,7 +34,8 @@ public class Enemy : MonoBehaviour
 
     public void GenerateTurnDecisions()
     {
-        MyTargetData.Target = combatManager.PlayerCombatants[0].gameObject;//temporary, will need to change but default targets Maya.
+        int Limit = combatManager.PlayerCombatants.Length;
+        MyTargetData.Target = combatManager.PlayerCombatants[Random.Range(0,Limit)].gameObject;//temporary, will need to change but default targets Maya.
     }
 
     public void ApplyDamage(int Damage)
