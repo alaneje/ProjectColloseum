@@ -511,8 +511,168 @@ public class Stats : MonoBehaviour
             matrix[i, 8].y = 71;
         }
 
+        //D1
+        {
+            int i = 13;
+            //Health
+            matrix[i, 0].x = 12;
+            matrix[i, 0].y = 28;
+
+            //Mana
+            matrix[i, 1].x = 38;
+            matrix[i, 1].y = 50;
+
+            //Attack
+            matrix[i, 2].x = 18;
+            matrix[i, 2].y = 25;
+
+            //Defence
+            matrix[i, 3].x = 16;
+            matrix[i, 3].y = 21;
+
+            //Resonance
+            matrix[i, 4].x = 19;
+            matrix[i, 4].y = 23;
+
+            //Constitution
+            matrix[i, 5].x = 28;
+            matrix[i, 5].y = 31;
+
+            //Evasion
+            matrix[i, 6].x = 33;
+            matrix[i, 6].y = 41;
+
+            //Accuracy
+            matrix[i, 7].x = 41;
+            matrix[i, 7].y = 43;
+
+            //Accuracy
+            matrix[i, 8].x = 19;
+            matrix[i, 8].y = 40;
+        }
+
+        //D2
+        {
+            int i = 14;
+            //Health
+            matrix[i, 0].x = 43;
+            matrix[i, 0].y = 48;
+
+            //Mana
+            matrix[i, 1].x = 23;
+            matrix[i, 1].y = 28;
+
+            //Attack
+            matrix[i, 2].x = 25;
+            matrix[i, 2].y = 28;
+
+            //Defence
+            matrix[i, 3].x = 15;
+            matrix[i, 3].y = 23;
+
+            //Resonance
+            matrix[i, 4].x = 23;
+            matrix[i, 4].y = 56;
+
+            //Constitution
+            matrix[i, 5].x = 43;
+            matrix[i, 5].y = 48;
+
+            //Evasion
+            matrix[i, 6].x = 19;
+            matrix[i, 6].y = 43;
+
+            //Accuracy
+            matrix[i, 7].x = 19;
+            matrix[i, 7].y = 22;
+
+            //Accuracy
+            matrix[i, 8].x = 19;
+            matrix[i, 8].y = 48;
+        }
+
+        //D3
+        {
+            int i = 15;
+            //Health
+            matrix[i, 0].x = 38;
+            matrix[i, 0].y = 50;
+
+            //Mana
+            matrix[i, 1].x = 32;
+            matrix[i, 1].y = 41;
+
+            //Attack
+            matrix[i, 2].x = 18;
+            matrix[i, 2].y = 25;
+
+            //Defence
+            matrix[i, 3].x = 21;
+            matrix[i, 3].y = 28;
+
+            //Resonance
+            matrix[i, 4].x = 41;
+            matrix[i, 4].y = 49;
+
+            //Constitution
+            matrix[i, 5].x = 31;
+            matrix[i, 5].y = 35;
+
+            //Evasion
+            matrix[i, 6].x = 14;
+            matrix[i, 6].y = 22;
+
+            //Accuracy
+            matrix[i, 7].x = 29;
+            matrix[i, 7].y = 25;
+
+            //Accuracy
+            matrix[i, 8].x = 23;
+            matrix[i, 8].y = 36;
+        }
+
+        //D4
+        {
+            int i = 16;
+            //Health
+            matrix[i, 0].x = 31;
+            matrix[i, 0].y = 64;
+
+            //Mana
+            matrix[i, 1].x = 23;
+            matrix[i, 1].y = 29;
+
+            //Attack
+            matrix[i, 2].x = 41;
+            matrix[i, 2].y = 49;
+
+            //Defence
+            matrix[i, 3].x = 35;
+            matrix[i, 3].y = 46;
+
+            //Resonance
+            matrix[i, 4].x = 21;
+            matrix[i, 4].y = 28;
+
+            //Constitution
+            matrix[i, 5].x = 18;
+            matrix[i, 5].y = 27;
+
+            //Evasion
+            matrix[i, 6].x = 24;
+            matrix[i, 6].y = 32;
+
+            //Accuracy
+            matrix[i, 7].x = 28;
+            matrix[i, 7].y = 31;
+
+            //Accuracy
+            matrix[i, 8].x = 18;
+            matrix[i, 8].y = 41;
+        }
+
 
 
         return matrix;
-    }
+    }//Creates a complete matrix
 }
