@@ -434,15 +434,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 237090cd3b4d3ff44b249ffdf6b4f78b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: {x: 0, y: 0}
+  Health: {x: 69, y: 69}
   Magic: {x: 0, y: 0}
-  Attack: 0
-  Resonance: 0
-  Defence: 0
-  Constitution: 0
-  Speed: 0
-  Accuracy: 0
-  Evasion: 0
+  Attack: 62
+  Resonance: 20
+  Defence: 20
+  Constitution: 20
+  Speed: 20
+  Accuracy: 20
+  Evasion: 20
 --- !u!1 &709813712
 GameObject:
   m_ObjectHideFlags: 0
