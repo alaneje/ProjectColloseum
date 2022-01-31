@@ -6,6 +6,7 @@ public class CombatProfile : MonoBehaviour
 {
     [Header("Basic Information")]
     public string Name;
+    public int StatGroup;
     public Vector2Int Health;
     public Vector2Int Magic;
     public int Attack;
