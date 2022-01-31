@@ -7,6 +7,13 @@ public class CombatProfile : MonoBehaviour
     [Header("Basic Information")]
     public string Name;
     public int StatGroup;
+    public Stats MyStats;
+    public Archive.Attribute[] PositiveAttribute;
+    public Archive.Attribute[] NegativeAttribute;
+    [Header("Abilities")]
+    public int[] SkillList;
+    [Header("Depricated")]
+
     public Vector2Int Health;
     public Vector2Int Magic;
     public int Attack;
@@ -16,11 +23,9 @@ public class CombatProfile : MonoBehaviour
     public int Speed;
     public int Accuracy;
     public int Evasion;
-    public Archive.Attribute[] PositiveAttribute;
-    public Archive.Attribute[] NegativeAttribute;
     
-    [Header("Abilities")]
-    public int[] SkillList;
+    
+  
 
     public void TakeDamage(int Damage, bool Magic, Archive.Attribute[] Attributes)
     {
