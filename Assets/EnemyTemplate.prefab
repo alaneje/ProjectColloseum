@@ -44,6 +44,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Bee
+  StatGroup: 16
+  MyStats: {fileID: 0}
+  PositiveAttribute: 0000000000000000
+  NegativeAttribute: 0000000000000000
+  SkillList: 
   Health: {x: 69, y: 69}
   Magic: {x: 0, y: 0}
   Attack: 20
@@ -53,6 +58,3 @@ MonoBehaviour:
   Speed: 20
   Accuracy: 20
   Evasion: 20
-  PositiveAttribute: 0000000000000000
-  NegativeAttribute: 0000000000000000
-  SkillList: 

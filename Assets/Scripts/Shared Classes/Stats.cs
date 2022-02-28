@@ -21,11 +21,28 @@ public class Stats : MonoBehaviour
 
         Vector2Int[,] matrix = buildmatrix() ;
 
+        returnedstats.Health.y = Random.Range(matrix[SetNumber, 0].x,matrix[SetNumber,0].y);//0 links to health
+        returnedstats.Health.x = returnedstats.Health.y;
+        returnedstats.Magic.y = Random.Range(matrix[SetNumber, 1].x, matrix[SetNumber, 1].y);//1 links to magic.
+        returnedstats.Magic.x = returnedstats.Magic.y;
 
+        returnedstats.Attack = Random.Range(matrix[SetNumber, 2].x, matrix[SetNumber, 2].y);//2 links to attack
+
+        returnedstats.Defence = Random.Range(matrix[SetNumber, 3].x, matrix[SetNumber, 3].y);//3 links to defence
+
+        returnedstats.Resonance = Random.Range(matrix[SetNumber, 4].x, matrix[SetNumber, 4].y);//4 links to resonance
+
+        returnedstats.Constitution = Random.Range(matrix[SetNumber, 5].x, matrix[SetNumber, 5].y);//5 links to constitution
+
+        returnedstats.Evasion = Random.Range(matrix[SetNumber, 6].x, matrix[SetNumber, 6].y);//6 links to evasion
+
+        returnedstats.Accuracy = Random.Range(matrix[SetNumber, 7].x, matrix[SetNumber, 7].y);//7 links to accuracy
+
+        returnedstats.Speed = Random.Range(matrix[SetNumber, 8].x, matrix[SetNumber, 8].y);//8 links to speed
 
 
         return returnedstats;
-    }
+    }//Builds stats.
 
     Vector2Int[,] buildmatrix()
     {
@@ -66,7 +83,7 @@ public class Stats : MonoBehaviour
             matrix[i, 7].x = 383;
             matrix[i, 7].y = 393;
 
-            //Accuracy
+            //Speed
             matrix[i, 8].x = 359;
             matrix[i, 8].y = 380;
         }

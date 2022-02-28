@@ -10,6 +10,7 @@ public class Archive : MonoBehaviour
 
     [Header("General")]
     public CombatAbilityProfile[] CombatAbilities;
+    public CombatProfile[] CombatantsList;
     public CombatProfile[] EnemyCombatants;
     //[Header("Party")]
    // public FaeCompaion Fae;

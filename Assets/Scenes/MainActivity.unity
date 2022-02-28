@@ -750,6 +750,18 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  CombatantsList:
+  - {fileID: 0}
+  - {fileID: 2518475515021674554, guid: 2093260ba78a82941965400ee2d68073, type: 3}
+  - {fileID: 2518475515021674554, guid: 5ca7e20dbb13e544a8b133f9c02def4f, type: 3}
+  - {fileID: 2518475515021674554, guid: bb8124735e995cf448f5ffe99eabbad7, type: 3}
+  - {fileID: 2518475515021674554, guid: da5430944464a13429c8a19c0fa7ee74, type: 3}
+  - {fileID: 2518475515021674554, guid: 782680ffd4656614997fe7ad45315156, type: 3}
+  - {fileID: 2518475515021674554, guid: 5d0205b2cafb7394d92c791860254cdd, type: 3}
+  - {fileID: 2518475515021674554, guid: 6fc0cd22fb54cbf4d90e2d7f34e2314e, type: 3}
+  - {fileID: 2518475515021674554, guid: 94d06b0f2832c8842ac8d87a6cceff56, type: 3}
+  - {fileID: 2518475515021674554, guid: c3f9abc8cbe02474aab28d492b7af6e9, type: 3}
+  - {fileID: 2518475515021674554, guid: e7764367de13d6d4ba85ad4c5f20fc1b, type: 3}
   EnemyCombatants:
   - {fileID: 6852962140020638021, guid: 5191aff0be850724ca28b3ad8929f166, type: 3}
 --- !u!114 &1181927589
