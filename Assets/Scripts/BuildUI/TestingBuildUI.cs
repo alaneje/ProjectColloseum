@@ -9,6 +9,7 @@ public class TestingBuildUI : MonoBehaviour
     [Header("Team Section - Navigation")]
     public Text CurrentCombatantNumberDisplayText;
     public Button[] CombatantNavigationButtons;
+    public InputField Name;
 
     int CurrentCombatant;
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class TestingBuildUI : MonoBehaviour
         GameObject x = GameObject.Find("Archive");
         Ark = x.GetComponent<Archive>();
         CurrentCombatant = 0;
+        LoadCharacter();
     }
 
     // Update is called once per frame
@@ -34,10 +36,22 @@ public class TestingBuildUI : MonoBehaviour
 
     public void ChangeNavigation(bool Forward)
     {
+        SaveCharacter();
         if (Forward) { CurrentCombatant++; } else
         {
             CurrentCombatant--;
         }
+        LoadCharacter();
+    }
+
+    void LoadCharacter()
+    {
+        Name.text = Ark.Combatants[CurrentCombatant].Name;
+    }
+
+    void SaveCharacter()
+    {
+
     }
 
     public void StartLoadedGame()
