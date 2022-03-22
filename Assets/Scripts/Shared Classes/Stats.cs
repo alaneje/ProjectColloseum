@@ -46,7 +46,7 @@ public class Stats : MonoBehaviour
 
     Vector2Int[,] buildmatrix()
     {
-        Vector2Int[,] matrix = new Vector2Int[9,16];
+        Vector2Int[,] matrix = new Vector2Int[17,9];
 
         //A1
         {
