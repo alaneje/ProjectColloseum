@@ -48,7 +48,7 @@ public class TestingBuildUI : MonoBehaviour
 
     public void ChangeNavigation(bool Forward)
     {
-        SaveCharacter();
+        SaveCharacterName();
         if (Forward) { CurrentCombatant++; } else
         {
             CurrentCombatant--;
@@ -131,9 +131,9 @@ public class TestingBuildUI : MonoBehaviour
 
     }
 
-    void SaveCharacter()
+    void SaveCharacterName()
     {
-
+        Name.text = Ark.Combatants[CurrentCombatant].Name;
     }
 
     public void StartLoadedGame()
