@@ -22,6 +22,11 @@ public class TestingBuildUI : MonoBehaviour
     [Header("Scenario Builder")]
      public Text PartyFull;
     public Text EnemyFull;
+    public Slider PlayerSlider;
+    public Slider EnemySlider;
+    public Text PartySizeText;
+    public Text EnemySizeText;
+    public InputField NewEnemyNumber;
 
     int CurrentCombatant;
     int CurrentNew;
@@ -36,6 +41,8 @@ public class TestingBuildUI : MonoBehaviour
         Com = x.GetComponent<CombatScenario>();
         CurrentCombatant = 0;
         CurrentNew = 0;
+        PlayerSlider.value = Com.PlayerCombatants.Length;
+        EnemySlider.value = Com.EnemyCombatants.Length;
         LoadCharacter();
         LoadType();
     }
@@ -94,6 +101,9 @@ public class TestingBuildUI : MonoBehaviour
             i++;
         }
         EnemyFull.text = T;
+
+        PartySizeText.text = "" + Com.PlayerCombatants.Length;
+        EnemySizeText.text = "" + Com.EnemyCombatants.Length;
     }
 
     
@@ -203,6 +213,30 @@ public class TestingBuildUI : MonoBehaviour
     public void OpenGenerate()
     {
         NewPannel.SetActive(true);
+    }
+
+    public void ChangePartyNumber()
+    {
+        Com.PlayerCombatants = new int[int.Parse(PlayerSlider.value.ToString())];
+
+
+    }
+
+    public void ChangeEnemyNumber()
+    {
+        Com.EnemyCombatants = new int[int.Parse(EnemySlider.value.ToString())];
+    }
+
+    public void AddEnemy()
+    {
+        int ENumber = int.Parse(NewEnemyNumber.text);
+        if(ENumber >= Ark.EnemyCombatants.Length)
+        {
+            ENumber = Ark.EnemyCombatants.Length - 1;
+        }
+
+        Com.EnemyCombatants[CurEnemyPosition] = ENumber;
+        CurEnemyPosition++;
     }
 
     void GenerateNewChar()

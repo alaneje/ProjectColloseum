@@ -1295,7 +1295,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1326010923}
   m_FillRect: {fileID: 323975763}
   m_HandleRect: {fileID: 1326010922}
@@ -1306,7 +1306,19 @@ MonoBehaviour:
   m_Value: 3
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1036014307}
+        m_TargetAssemblyTypeName: TestingBuildUI, Assembly-CSharp
+        m_MethodName: ChangePartyNumber
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &457917802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,7 +1643,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 523945519}
   m_TextComponent: {fileID: 553838189}
   m_Placeholder: {fileID: 748734623}
@@ -1642,10 +1654,22 @@ MonoBehaviour:
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 1
-  m_CharacterLimit: 0
+  m_CharacterLimit: 2
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1036014307}
+        m_TargetAssemblyTypeName: TestingBuildUI, Assembly-CSharp
+        m_MethodName: AddEnemy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3668,6 +3692,11 @@ MonoBehaviour:
   AddToPartyB: {fileID: 1116975997}
   PartyFull: {fileID: 1272939868}
   EnemyFull: {fileID: 1437242262}
+  PlayerSlider: {fileID: 415698463}
+  EnemySlider: {fileID: 1609560327}
+  PartySizeText: {fileID: 1952583383}
+  EnemySizeText: {fileID: 649350139}
+  NewEnemyNumber: {fileID: 523945518}
 --- !u!4 &1036014308
 Transform:
   m_ObjectHideFlags: 0
@@ -6045,7 +6074,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 753801700}
   m_FillRect: {fileID: 750920421}
   m_HandleRect: {fileID: 753801699}
@@ -6056,7 +6085,19 @@ MonoBehaviour:
   m_Value: 3
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1036014307}
+        m_TargetAssemblyTypeName: TestingBuildUI, Assembly-CSharp
+        m_MethodName: ChangeEnemyNumber
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &1691013500
 GameObject:
   m_ObjectHideFlags: 0
