@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TestingBuildUI : MonoBehaviour
 {
     Archive Ark;
+    CombatScenario Com;
     [Header("Team Section - Navigation")]
     public Text CurrentCombatantNumberDisplayText;
     public Button[] CombatantNavigationButtons;
@@ -16,15 +17,23 @@ public class TestingBuildUI : MonoBehaviour
     public Text StatsT;
     public Text OtherDetailsT;
     public GameObject NewPannel;
+    public Button AddToPartyB;
+
+    [Header("Scenario Builder")]
+     public Text PartyFull;
+    public Text EnemyFull;
 
     int CurrentCombatant;
     int CurrentNew;
+
+    int CurPartyPosition;
 
     // Start is called before the first frame update
     void Start()
     {
         GameObject x = GameObject.Find("Archive");
         Ark = x.GetComponent<Archive>();
+        Com = x.GetComponent<CombatScenario>();
         CurrentCombatant = 0;
         CurrentNew = 0;
         LoadCharacter();
@@ -35,6 +44,8 @@ public class TestingBuildUI : MonoBehaviour
     void Update()
     {
         NavigationDisplayUpdate();
+        PartyTextUpdate();
+        IntChecks();
     }
 
     void NavigationDisplayUpdate()
@@ -42,6 +53,42 @@ public class TestingBuildUI : MonoBehaviour
         if(CurrentCombatant == 0) { CombatantNavigationButtons[1].interactable = false; } else { CombatantNavigationButtons[1].interactable = true; }
         if(CurrentCombatant == (Ark.Combatants.Length - 1)) { CombatantNavigationButtons[0].interactable = false; } else { CombatantNavigationButtons[0].interactable = true; }
         CurrentCombatantNumberDisplayText.text = "" + CurrentCombatant;
+
+        if(Name.text == "") { AddToPartyB.interactable = false; } else { AddToPartyB.interactable = true; }
+    }
+
+    void IntChecks()
+    {
+        if(CurPartyPosition > Com.PlayerCombatants.Length - 1)
+        {
+            CurPartyPosition = 0;
+        }
+    }
+
+    void PartyTextUpdate()
+    {
+        int i = 0;
+        string T = "";
+        while(i != Com.PlayerCombatants.Length)
+        {
+            T += "(" + i + ") ";
+            T += Ark.Combatants[Com.PlayerCombatants[i]].Name;
+            T += ", ";
+            i++;
+        }
+
+        PartyFull.text = T;
+
+        i = 0;//Reset i for next loop.
+        T = "";//Reset T for next loop
+        while(i != Com.EnemyCombatants.Length)
+        {
+            T += "(" + i + ") ";
+            T += Ark.EnemyCombatants[Com.EnemyCombatants[i]].Name;
+            T += ", ";
+            i++;
+        }
+        EnemyFull.text = T;
     }
 
     
@@ -163,5 +210,11 @@ public class TestingBuildUI : MonoBehaviour
 
         LoadCharacter();
         
+    }
+
+    public void AddToParty()
+    {
+        Com.PlayerCombatants[CurPartyPosition] = CurrentCombatant;
+        CurPartyPosition++;
     }
 }
