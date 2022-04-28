@@ -27,7 +27,7 @@ public class TestingBuildUI : MonoBehaviour
     int CurrentNew;
 
     int CurPartyPosition;
-
+    int CurEnemyPosition;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +62,11 @@ public class TestingBuildUI : MonoBehaviour
         if(CurPartyPosition > Com.PlayerCombatants.Length - 1)
         {
             CurPartyPosition = 0;
+        }
+
+        if(CurEnemyPosition > Com.PlayerCombatants.Length - 1)
+        {
+            CurEnemyPosition = 0;
         }
     }
 
