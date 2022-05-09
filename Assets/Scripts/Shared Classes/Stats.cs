@@ -41,6 +41,17 @@ public class Stats : MonoBehaviour
         if(Evasion > StatMax) { Evasion = StatMax; }
     }
 
+    public int ReturnStatAverage()
+    {
+        int i = Health.y + Magic.y + Attack + Resonance +  Defence + Constitution + Speed + Accuracy + Evasion;
+
+        i = i / 9;
+
+
+        return i;
+
+    }
+
     public Stats ReturnRandomisedStats(int SetNumber)
     {
         Stats returnedstats = new Stats();
