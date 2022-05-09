@@ -91,6 +91,7 @@ public class WeaponNav : MonoBehaviour
     void RenderButtons()
     {
         int i = 0;
+        if(CurrentMode == Mode.Buy || CurrentMode == Mode.Sell){i++;}//prevents basic knife showing up in buy and sell.
         while(i != WeaponButtonList.Length)
         {
             if(i < Ark.WeaponList.Length)
