@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GuildManager : MonoBehaviour
 {
     [Header("UI Elements")]
+    public WeaponNav WeaponsMenu;
     [Header("OnScreen Card")]
     public Text CardName;
     public Text CardAV;
@@ -13,6 +14,8 @@ public class GuildManager : MonoBehaviour
     public Text CardWeapon;
     public Text CardMana;
     public Image CardIMG;
+
+
 
 
     int CurrentCard;
@@ -37,5 +40,10 @@ public class GuildManager : MonoBehaviour
         CardHealth.text = "" + Ark.Combatants[CurrentCard].MyStats.Health.y;
         CardMana.text = "" + Ark.Combatants[CurrentCard].MyStats.Magic.y;
         CardWeapon.text = "Weapon: " + Ark.WeaponList[Ark.Combatants[CurrentCard].Weapon].WeaponName;
+    }
+
+    public void OpenSwapsMenu()
+    {
+        WeaponsMenu.OpenSwapMenu(CurrentCard);
     }
 }
