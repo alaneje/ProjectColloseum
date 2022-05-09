@@ -28,6 +28,12 @@ public class WeaponNav : MonoBehaviour
     public Button Close;
     public Button CTA;
     public Text CTAT;
+    [Header("WeaponCard")]
+    public GameObject WeaponCard;
+    public Text WeaponName;
+    public Image WeaponSpr;
+    public Text[] WeaponAbilityText;
+
 
 
     Archive Ark;
@@ -55,9 +61,29 @@ public class WeaponNav : MonoBehaviour
 
         RenderButtons();
         SetViewRules();
-
+        if(WeaponCard.activeInHierarchy)
+        {
+            RenderWeaponCard();
+        }
         
        
+    }
+
+    void RenderWeaponCard()
+    {
+        WeaponName.text = Ark.WeaponList[NewWeapon].WeaponName;
+        int i = 0;
+        while(i != WeaponAbilityText.Length)
+        {
+            WeaponAbilityText[i].text = "";
+            i++;
+        }
+        i = 0;
+        while(i != Ark.WeaponList[NewWeapon].SkillList.Length)
+        {
+            WeaponAbilityText[i].text = Ark.CombatAbilities[Ark.WeaponList[NewWeapon].SkillList[i]].AbilityName;
+            i++;
+        }
     }
 
     void SetViewRules()
@@ -158,8 +184,8 @@ public class WeaponNav : MonoBehaviour
     }//Close the menu. 
 
     public void ViewWeaponDetails()
-    {
-
+    {   
+        WeaponCard.SetActive(true);
     }
 
     void SwapWeapon()
@@ -190,6 +216,11 @@ public class WeaponNav : MonoBehaviour
     {
         NewWeapon = 0;//Reset weapon. 
         this.gameObject.SetActive(true);
+    }
+
+    public void CloseWeaponCard()
+    {
+        WeaponCard.SetActive(false);
     }
 
 }
