@@ -14,7 +14,15 @@ public class Stats : MonoBehaviour
     public int Speed;
     public int Accuracy;
     public int Evasion;
-   
+
+
+    int StatMax = 999;
+    int StatMin = 0;
+    public void StatsSafetyCheck()
+    {
+
+    }
+
     public Stats ReturnRandomisedStats(int SetNumber)
     {
         Stats returnedstats = new Stats();

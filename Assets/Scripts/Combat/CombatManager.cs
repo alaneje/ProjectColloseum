@@ -291,6 +291,7 @@ public class CombatManager : MonoBehaviour
             {
                 E[i].gameObject.SetActive(true);
                 CombatProfile CX = E[i].GetComponent<CombatProfile>();
+                //Set Primarily stats
                 CX.Name = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Name;
                 CX.MyStats.Health = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].MyStats.Health;
                 CX.MyStats.Magic = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].MyStats.Magic;
@@ -303,6 +304,19 @@ public class CombatManager : MonoBehaviour
                 CX.PositiveAttribute = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].PositiveAttribute;
                 CX.NegativeAttribute = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].NegativeAttribute;
                 CX.Weapon = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Weapon;
+
+                //Add Weapon Stats
+                CX.MyStats.Health += Ark.WeaponList[CX.Weapon].WeaponStats.Health;
+                CX.MyStats.Magic += Ark.WeaponList[CX.Weapon].WeaponStats.Magic;
+                CX.MyStats.Attack += Ark.WeaponList[CX.Weapon].WeaponStats.Attack;
+                CX.MyStats.Resonance += Ark.WeaponList[CX.Weapon].WeaponStats.Resonance;
+                CX.MyStats.Defence += Ark.WeaponList[CX.Weapon].WeaponStats.Defence;
+                CX.MyStats.Constitution += Ark.WeaponList[CX.Weapon].WeaponStats.Constitution;
+                CX.MyStats.Evasion += Ark.WeaponList[CX.Weapon].WeaponStats.Evasion;
+                CX.MyStats.Accuracy += Ark.WeaponList[CX.Weapon].WeaponStats.Accuracy;
+
+                //End Building enemy, increment values. 
+                CX.MyStats.StatsSafetyCheck();//Safety nets the stat values to ensure they don't break boundaries. 
                 EnemiesBuilt++;
 
             }
@@ -339,6 +353,19 @@ public class CombatManager : MonoBehaviour
                 CX.PositiveAttribute = Ark.Combatants[CS.PlayerCombatants[i]].PositiveAttribute;
                 CX.NegativeAttribute = Ark.Combatants[CS.PlayerCombatants[i]].NegativeAttribute;
                 CX.Weapon = Ark.Combatants[CS.PlayerCombatants[i]].Weapon;
+
+                //Add Weapon Stats
+                CX.MyStats.Health += Ark.WeaponList[CX.Weapon].WeaponStats.Health;
+                CX.MyStats.Magic += Ark.WeaponList[CX.Weapon].WeaponStats.Magic;
+                CX.MyStats.Attack += Ark.WeaponList[CX.Weapon].WeaponStats.Attack;
+                CX.MyStats.Resonance += Ark.WeaponList[CX.Weapon].WeaponStats.Resonance;
+                CX.MyStats.Defence += Ark.WeaponList[CX.Weapon].WeaponStats.Defence;
+                CX.MyStats.Constitution += Ark.WeaponList[CX.Weapon].WeaponStats.Constitution;
+                CX.MyStats.Evasion += Ark.WeaponList[CX.Weapon].WeaponStats.Evasion;
+                CX.MyStats.Accuracy += Ark.WeaponList[CX.Weapon].WeaponStats.Accuracy;
+
+                //End Building enemy, increment values. 
+                CX.MyStats.StatsSafetyCheck();//Safety nets the stat values to ensure they don't break boundaries. 
 
             }
             else
