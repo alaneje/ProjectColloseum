@@ -45,6 +45,8 @@ public class TestingBuildUI : MonoBehaviour
         EnemySlider.value = Com.EnemyCombatants.Length;
         LoadCharacter();
         LoadType();
+
+       
     }
 
     // Update is called once per frame

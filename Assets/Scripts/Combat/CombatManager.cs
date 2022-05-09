@@ -47,6 +47,8 @@ public class CombatManager : MonoBehaviour
         BuildPlayerCombatants();
         GeneratePlayerList();
         EnemyCreator();
+
+        
     }
 
     // Update is called once per frame
