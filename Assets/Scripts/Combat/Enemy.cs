@@ -26,8 +26,8 @@ public class Enemy : MonoBehaviour
     {
         if(EnemyProfile.Health.x < 1)
         {
-           // this.gameObject.tag = "NOENEMY";
-            this.gameObject.SetActive(false);
+            // this.gameObject.tag = "NOENEMY";
+            HandleDeath();
         }
     }
 
@@ -40,5 +40,11 @@ public class Enemy : MonoBehaviour
     public void ApplyDamage(int Damage)
     {
         EnemyProfile.Health.x -= Damage;
+    }
+
+    void HandleDeath()
+    {
+        this.gameObject.SetActive(false);
+
     }
 }

@@ -31,6 +31,9 @@ public class CombatManager : MonoBehaviour
     bool InTurnGameplay;
     bool InTurnAbilityLock;
 
+    int EnemiesBuilt;
+    GameObject[] StoredList;
+    int Wavecount;
     private void Awake()
     {
         
@@ -42,11 +45,8 @@ public class CombatManager : MonoBehaviour
         GameObject x = GameObject.Find("Archive");
         Ark = x.GetComponent<Archive>();
         BuildPlayerCombatants();
-        BuildEnemyCombatants();
-        GenerateEnemyList();
         GeneratePlayerList();
-        GenerateTurnOrder();
-       
+        EnemyCreator();
     }
 
     // Update is called once per frame
@@ -135,11 +135,29 @@ public class CombatManager : MonoBehaviour
         GameObject[] P = GameObject.FindGameObjectsWithTag("Enemy");
         if (E.Length < 1)
         {
+            
             GameOverScreen.SetActive(true);
         }
         else if (P.Length < 1)
         {
-            VictoryScreen.SetActive(true);
+            CombatScenario CS = Ark.gameObject.GetComponent<CombatScenario>();
+            if (EnemiesBuilt > CS.EnemyCombatants.Length - 1)
+            {
+                VictoryScreen.SetActive(true);
+            }
+            else
+            {
+                Debug.Log("HITTING THE NEXT ENEMY WAVE BUILDING PROCESS.");
+                int ii = 0;
+                while(ii != StoredList.Length)
+                {
+                    StoredList[ii].SetActive(true);
+                    ii++;
+                }//Revive all old gameobjects.
+                EnemyCreator();
+                EndOfTurn();
+            }
+            
         }
         else
         {
@@ -187,6 +205,13 @@ public class CombatManager : MonoBehaviour
     {
         TurnCombatants = GameObject.FindObjectsOfType<CombatantTurnSubmission>();
     }//Generates the turn order from the current list of combatants. 
+
+    void EnemyCreator()
+    {
+        BuildEnemyCombatants();
+        GenerateEnemyList();
+        GenerateTurnOrder();
+    }
 
     //ButtonCommands
     public void ChangeTarget(int Direction)
@@ -249,33 +274,44 @@ public class CombatManager : MonoBehaviour
 
     void BuildEnemyCombatants()
     {
+        Wavecount++;//Increase Wave count. 
         CombatScenario CS = Ark.gameObject.GetComponent<CombatScenario>();
         GameObject[] E = GameObject.FindGameObjectsWithTag("Enemy");
+        if(EnemiesBuilt == 0)
+        {
+            StoredList = E;
+            Debug.Log("All Enemy objects dynamically stored in backup list. ");
+        }
+        Debug.Log("Total Enemy Objects: " + E.Length);
         int i = 0;
         while(i != E.Length)
         {
-            if(i + 1 !<= CS.EnemyCombatants.Length)
+           // if (EnemiesBuilt == CS.EnemyCombatants.Length) { EnemiesBuilt = CS.EnemyCombatants.Length; break; }//error fix
+            if (EnemiesBuilt + 1 !<= CS.EnemyCombatants.Length)
             {
                 E[i].gameObject.SetActive(true);
                 CombatProfile CX = E[i].GetComponent<CombatProfile>();
-                CX.Name = Ark.EnemyCombatants[CS.EnemyCombatants[i]].Name;
-                CX.Health = Ark.EnemyCombatants[CS.EnemyCombatants[i]].Health;
-                CX.Magic = Ark.EnemyCombatants[CS.EnemyCombatants[i]].Magic;
-                CX.Attack = Ark.EnemyCombatants[CS.EnemyCombatants[i]].Attack;
-                CX.Resonance = Ark.EnemyCombatants[CS.EnemyCombatants[i]].Resonance;
-                CX.Defence = Ark.EnemyCombatants[CS.EnemyCombatants[i]].Defence;
-                CX.Constitution = Ark.EnemyCombatants[CS.EnemyCombatants[i]].Constitution;
-                CX.Evasion = Ark.EnemyCombatants[CS.EnemyCombatants[i]].Evasion;
-                CX.Accuracy = Ark.EnemyCombatants[CS.EnemyCombatants[i]].Accuracy;
-                CX.PositiveAttribute = Ark.EnemyCombatants[CS.EnemyCombatants[i]].PositiveAttribute;
-                CX.NegativeAttribute = Ark.EnemyCombatants[CS.EnemyCombatants[i]].NegativeAttribute;
-                CX.SkillList = Ark.EnemyCombatants[CS.EnemyCombatants[i]].SkillList;
+                CX.Name = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Name;
+                CX.Health = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Health;
+                CX.Magic = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Magic;
+                CX.Attack = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Attack;
+                CX.Resonance = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Resonance;
+                CX.Defence = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Defence;
+                CX.Constitution = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Constitution;
+                CX.Evasion = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Evasion;
+                CX.Accuracy = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Accuracy;
+                CX.PositiveAttribute = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].PositiveAttribute;
+                CX.NegativeAttribute = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].NegativeAttribute;
+                CX.SkillList = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].SkillList;
+                EnemiesBuilt++;
 
             }
             else
             {
                 E[i].gameObject.SetActive(false);
             }
+            
+            
             i++;
         }
     }//Build the enemy combatants from the scenario
@@ -320,6 +356,11 @@ public class CombatManager : MonoBehaviour
 
         InTurnAbilityLock = false;
         BeginPostTurn();
+    }
+
+    public int GetEnemiesBuilt()
+    {
+        return EnemiesBuilt;
     }
 
 }

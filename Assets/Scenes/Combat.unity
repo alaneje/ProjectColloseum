@@ -237,6 +237,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Derek
+  StatGroup: 0
+  MyStats: {fileID: 0}
+  PositiveAttribute: 0700000008000000
+  NegativeAttribute: 0100000005000000
+  SkillList: 0000000001000000
   Health: {x: 69, y: 69}
   Magic: {x: 0, y: 0}
   Attack: 62
@@ -246,9 +251,6 @@ MonoBehaviour:
   Speed: 20
   Accuracy: 20
   Evasion: 20
-  PositiveAttribute: 0700000008000000
-  NegativeAttribute: 0100000005000000
-  SkillList: 0000000001000000
 --- !u!114 &28023104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,6 +393,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Gareth
+  StatGroup: 0
+  MyStats: {fileID: 0}
+  PositiveAttribute: 0700000008000000
+  NegativeAttribute: 0100000005000000
+  SkillList: 00000000010000000100000000000000
   Health: {x: 69, y: 69}
   Magic: {x: 0, y: 0}
   Attack: 62
@@ -400,9 +407,6 @@ MonoBehaviour:
   Speed: 20
   Accuracy: 20
   Evasion: 20
-  PositiveAttribute: 0700000008000000
-  NegativeAttribute: 0100000005000000
-  SkillList: 00000000010000000100000000000000
 --- !u!114 &53849139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -744,6 +748,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  StatGroup: 0
+  MyStats: {fileID: 0}
+  PositiveAttribute: 
+  NegativeAttribute: 
+  SkillList: 
   Health: {x: 0, y: 0}
   Magic: {x: 0, y: 0}
   Attack: 0
@@ -753,9 +762,6 @@ MonoBehaviour:
   Speed: 0
   Accuracy: 0
   Evasion: 0
-  PositiveAttribute: 
-  NegativeAttribute: 
-  SkillList: 
 --- !u!114 &245498699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -779,7 +785,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 245498694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3.79}
+  m_LocalPosition: {x: 0.69, y: 0.526, z: 3.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -899,6 +905,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Derek
+  StatGroup: 0
+  MyStats: {fileID: 0}
+  PositiveAttribute: 0700000008000000
+  NegativeAttribute: 0100000005000000
+  SkillList: 0000000001000000
   Health: {x: 69, y: 69}
   Magic: {x: 0, y: 0}
   Attack: 62
@@ -908,9 +919,6 @@ MonoBehaviour:
   Speed: 20
   Accuracy: 20
   Evasion: 20
-  PositiveAttribute: 0700000008000000
-  NegativeAttribute: 0100000005000000
-  SkillList: 0000000001000000
 --- !u!114 &285554023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1132,6 +1140,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Derek
+  StatGroup: 0
+  MyStats: {fileID: 0}
+  PositiveAttribute: 0700000008000000
+  NegativeAttribute: 0100000005000000
+  SkillList: 0000000001000000
   Health: {x: 69, y: 69}
   Magic: {x: 0, y: 0}
   Attack: 62
@@ -1141,9 +1154,6 @@ MonoBehaviour:
   Speed: 20
   Accuracy: 20
   Evasion: 20
-  PositiveAttribute: 0700000008000000
-  NegativeAttribute: 0100000005000000
-  SkillList: 0000000001000000
 --- !u!114 &538063247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1447,6 +1457,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Gareth
+  StatGroup: 0
+  MyStats: {fileID: 0}
+  PositiveAttribute: 0700000008000000
+  NegativeAttribute: 0100000005000000
+  SkillList: 00000000010000000100000000000000
   Health: {x: 69, y: 69}
   Magic: {x: 0, y: 0}
   Attack: 62
@@ -1456,9 +1471,6 @@ MonoBehaviour:
   Speed: 20
   Accuracy: 20
   Evasion: 20
-  PositiveAttribute: 0700000008000000
-  NegativeAttribute: 0100000005000000
-  SkillList: 00000000010000000100000000000000
 --- !u!1 &679696149
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,6 +1733,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Derek
+  StatGroup: 0
+  MyStats: {fileID: 0}
+  PositiveAttribute: 0700000008000000
+  NegativeAttribute: 0100000005000000
+  SkillList: 0000000001000000
   Health: {x: 69, y: 69}
   Magic: {x: 0, y: 0}
   Attack: 62
@@ -1730,9 +1747,6 @@ MonoBehaviour:
   Speed: 20
   Accuracy: 20
   Evasion: 20
-  PositiveAttribute: 0700000008000000
-  NegativeAttribute: 0100000005000000
-  SkillList: 0000000001000000
 --- !u!114 &782678368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2164,6 +2178,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  StatGroup: 0
+  MyStats: {fileID: 0}
+  PositiveAttribute: 
+  NegativeAttribute: 
+  SkillList: 
   Health: {x: 0, y: 0}
   Magic: {x: 0, y: 0}
   Attack: 0
@@ -2173,9 +2192,6 @@ MonoBehaviour:
   Speed: 0
   Accuracy: 0
   Evasion: 0
-  PositiveAttribute: 
-  NegativeAttribute: 
-  SkillList: 
 --- !u!114 &888132425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2199,7 +2215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888132420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.38, y: 0, z: 3.79}
+  m_LocalPosition: {x: 0.666, y: 0, z: 3.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3242,6 +3258,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Derek
+  StatGroup: 0
+  MyStats: {fileID: 0}
+  PositiveAttribute: 0700000008000000
+  NegativeAttribute: 0100000005000000
+  SkillList: 0000000001000000
   Health: {x: 69, y: 69}
   Magic: {x: 0, y: 0}
   Attack: 62
@@ -3251,9 +3272,6 @@ MonoBehaviour:
   Speed: 20
   Accuracy: 20
   Evasion: 20
-  PositiveAttribute: 0700000008000000
-  NegativeAttribute: 0100000005000000
-  SkillList: 0000000001000000
 --- !u!114 &1294660403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3396,6 +3414,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  StatGroup: 0
+  MyStats: {fileID: 0}
+  PositiveAttribute: 
+  NegativeAttribute: 
+  SkillList: 
   Health: {x: 0, y: 0}
   Magic: {x: 0, y: 0}
   Attack: 0
@@ -3405,9 +3428,6 @@ MonoBehaviour:
   Speed: 0
   Accuracy: 0
   Evasion: 0
-  PositiveAttribute: 
-  NegativeAttribute: 
-  SkillList: 
 --- !u!114 &1310490945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3431,7 +3451,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310490940}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.627, y: 0, z: 3.79}
+  m_LocalPosition: {x: -0.04, y: 0.526, z: 3.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3786,6 +3806,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  StatGroup: 0
+  MyStats: {fileID: 0}
+  PositiveAttribute: 
+  NegativeAttribute: 
+  SkillList: 
   Health: {x: 0, y: 0}
   Magic: {x: 0, y: 0}
   Attack: 0
@@ -3795,9 +3820,6 @@ MonoBehaviour:
   Speed: 0
   Accuracy: 0
   Evasion: 0
-  PositiveAttribute: 
-  NegativeAttribute: 
-  SkillList: 
 --- !u!114 &1618654748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4074,6 +4096,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  StatGroup: 0
+  MyStats: {fileID: 0}
+  PositiveAttribute: 
+  NegativeAttribute: 
+  SkillList: 
   Health: {x: 0, y: 0}
   Magic: {x: 0, y: 0}
   Attack: 0
@@ -4083,9 +4110,6 @@ MonoBehaviour:
   Speed: 0
   Accuracy: 0
   Evasion: 0
-  PositiveAttribute: 
-  NegativeAttribute: 
-  SkillList: 
 --- !u!114 &1689474996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4174,7 +4198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689474994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.627, y: 0, z: 3.79}
+  m_LocalPosition: {x: 2.627, y: 0.494, z: 3.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4309,6 +4333,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  StatGroup: 0
+  MyStats: {fileID: 0}
+  PositiveAttribute: 
+  NegativeAttribute: 
+  SkillList: 
   Health: {x: 0, y: 0}
   Magic: {x: 0, y: 0}
   Attack: 0
@@ -4318,9 +4347,6 @@ MonoBehaviour:
   Speed: 0
   Accuracy: 0
   Evasion: 0
-  PositiveAttribute: 
-  NegativeAttribute: 
-  SkillList: 
 --- !u!114 &1692480763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4344,7 +4370,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692480758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.627, y: 0, z: 3.79}
+  m_LocalPosition: {x: 2.643, y: 0, z: 3.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4478,6 +4504,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  StatGroup: 0
+  MyStats: {fileID: 0}
+  PositiveAttribute: 
+  NegativeAttribute: 
+  SkillList: 
   Health: {x: 0, y: 0}
   Magic: {x: 0, y: 0}
   Attack: 0
@@ -4487,9 +4518,6 @@ MonoBehaviour:
   Speed: 0
   Accuracy: 0
   Evasion: 0
-  PositiveAttribute: 
-  NegativeAttribute: 
-  SkillList: 
 --- !u!114 &1753049837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4619,6 +4647,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Derek
+  StatGroup: 0
+  MyStats: {fileID: 0}
+  PositiveAttribute: 0700000008000000
+  NegativeAttribute: 0100000005000000
+  SkillList: 0000000001000000
   Health: {x: 69, y: 69}
   Magic: {x: 0, y: 0}
   Attack: 62
@@ -4628,9 +4661,6 @@ MonoBehaviour:
   Speed: 20
   Accuracy: 20
   Evasion: 20
-  PositiveAttribute: 0700000008000000
-  NegativeAttribute: 0100000005000000
-  SkillList: 0000000001000000
 --- !u!114 &1970509358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4773,6 +4803,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  StatGroup: 0
+  MyStats: {fileID: 0}
+  PositiveAttribute: 
+  NegativeAttribute: 
+  SkillList: 
   Health: {x: 0, y: 0}
   Magic: {x: 0, y: 0}
   Attack: 0
@@ -4782,9 +4817,6 @@ MonoBehaviour:
   Speed: 0
   Accuracy: 0
   Evasion: 0
-  PositiveAttribute: 
-  NegativeAttribute: 
-  SkillList: 
 --- !u!114 &2019462715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4808,7 +4840,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019462710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.627, y: 0, z: 3.79}
+  m_LocalPosition: {x: 1.513, y: 0.549, z: 3.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
