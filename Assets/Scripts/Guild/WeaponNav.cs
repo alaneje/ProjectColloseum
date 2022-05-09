@@ -95,7 +95,15 @@ public class WeaponNav : MonoBehaviour
         {
             if(i < Ark.WeaponList.Length)
             {
-                WeaponButtonList[i].interactable = true;
+                if(Ark.WeaponStorage[i] > 0)
+                {
+                    WeaponButtonList[i].interactable = true;
+                }
+                else
+                {
+                    WeaponButtonList[i].interactable = false;
+                }
+                
                 WeaponButtonNameList[i].text = Ark.WeaponList[i].WeaponName;
                 if(i !=0)
                 {
