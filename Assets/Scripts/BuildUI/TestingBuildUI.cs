@@ -182,10 +182,11 @@ public class TestingBuildUI : MonoBehaviour
             Y += "Negative Attribute: " + Ark.Combatants[CurrentCombatant].NegativeAttribute[i].ToString() + "\n";
             i++;
         }
+        Y += "Weapon: " + Ark.WeaponList[Ark.Combatants[CurrentCombatant].Weapon].WeaponName + "\n";
         i = 0;
-        while (i != Ark.Combatants[CurrentCombatant].SkillList.Length)
+        while (i != Ark.WeaponList[Ark.Combatants[CurrentCombatant].Weapon].SkillList.Length)
         {
-            Y +=  "[SKILL] " + Ark.CombatAbilities[Ark.Combatants[CurrentCombatant].SkillList[i]].AbilityName + "\n";
+            Y +=  "[W SKILL] " + Ark.CombatAbilities[Ark.WeaponList[Ark.Combatants[CurrentCombatant].Weapon].SkillList[i]].AbilityName + "\n";
             i++;
         }
 

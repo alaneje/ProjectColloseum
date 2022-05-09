@@ -24,7 +24,7 @@ public class CombatPlayer : MonoBehaviour
 
     public void EndLife()
     {
-        if (MyProfile.Health.x < 1)
+        if (MyProfile.MyStats.Health.x < 1)
         {
             // this.gameObject.tag = "NOENEMY";
             this.gameObject.SetActive(false);

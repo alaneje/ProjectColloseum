@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6852962140020638018
+--- !u!1 &8852839285058880711
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6852962140020638020}
-  - component: {fileID: 6852962140020638021}
-  - component: {fileID: 7596236730579038474}
+  - component: {fileID: 8852839285058880710}
+  - component: {fileID: 8852839285058880708}
+  - component: {fileID: 8852839285058880709}
   m_Layer: 0
-  m_Name: EnemyTemplate
+  m_Name: 00Knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6852962140020638020
+--- !u!4 &8852839285058880710
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6852962140020638018}
+  m_GameObject: {fileID: 8852839285058880711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,43 +32,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6852962140020638021
+--- !u!114 &8852839285058880708
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6852962140020638018}
+  m_GameObject: {fileID: 8852839285058880711}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21f27cc28e786174fa45f26a33787450, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f654c70d4f4dbe4cafedf92d730c01c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Bee
-  StatGroup: 16
-  MyStats: {fileID: 7596236730579038474}
-  PositiveAttribute: 0000000000000000
-  NegativeAttribute: 0000000000000000
-  Weapon: 0
-  SkillList: 
---- !u!114 &7596236730579038474
+  WeaponName: Basic Knife
+  WeaponStats: {fileID: 8852839285058880709}
+  SkillList: 00000000
+--- !u!114 &8852839285058880709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6852962140020638018}
+  m_GameObject: {fileID: 8852839285058880711}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 237090cd3b4d3ff44b249ffdf6b4f78b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: {x: 32, y: 32}
-  Magic: {x: 5, y: 5}
-  Attack: 21
-  Resonance: 21
-  Defence: 21
-  Constitution: 21
-  Speed: 21
-  Accuracy: 21
-  Evasion: 21
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 4
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0

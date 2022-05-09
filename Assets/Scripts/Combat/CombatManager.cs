@@ -68,15 +68,15 @@ public class CombatManager : MonoBehaviour
     void CombatUI()
     {
         string Name = PlayerCombatants[CurrentPlayer].MyProfile.Name;
-        PlayerHealthText.text = Name + PlayerCombatants[CurrentPlayer].MyProfile.Health.x + "/" + PlayerCombatants[CurrentPlayer].MyProfile.Health.y;
+        PlayerHealthText.text = Name + PlayerCombatants[CurrentPlayer].MyProfile.MyStats.Health.x + "/" + PlayerCombatants[CurrentPlayer].MyProfile.MyStats.Health.y;
 
 
         int i = 0;
         while(i != AbilityButtons.Length)
         {
-            if(i !<= PlayerCombatants[CurrentPlayer].MyProfile.SkillList.Length - 1)
+            if(i !<= Ark.WeaponList[PlayerCombatants[CurrentPlayer].MyProfile.Weapon].SkillList.Length - 1)
             {
-                int A = PlayerCombatants[CurrentPlayer].MyProfile.SkillList[i];//Get ability number from the list
+                int A = Ark.WeaponList[PlayerCombatants[CurrentPlayer].MyProfile.Weapon].SkillList[i];//Get ability number from the list
                 AbilityButtons[i].interactable = true;
                 AbilityButtonText[i].text = Ark.CombatAbilities[A].AbilityName;
             }
@@ -245,8 +245,8 @@ public class CombatManager : MonoBehaviour
     void GenerateTurnAbility()
     {       
         CombatAbilityProfile A = Instantiate(Ark.CombatAbilities[TurnCombatants[CurrentTurn].AbilityNumber].gameObject, TurnCombatants[CurrentTurn].Target.transform.position,Quaternion.identity).GetComponent<CombatAbilityProfile>();
-        A.PhysicalAttack = TurnCombatants[CurrentTurn].gameObject.GetComponent<CombatProfile>().Attack;
-        A.MagicAttack = TurnCombatants[CurrentTurn].gameObject.GetComponent<CombatProfile>().Resonance;
+        A.PhysicalAttack = TurnCombatants[CurrentTurn].gameObject.GetComponent<CombatProfile>().MyStats.Attack;
+        A.MagicAttack = TurnCombatants[CurrentTurn].gameObject.GetComponent<CombatProfile>().MyStats.Resonance;
         A.AttributesCarried = TurnCombatants[CurrentTurn].gameObject.GetComponent<CombatProfile>().PositiveAttribute;
 
         InTurnAbilityLock = true;
@@ -292,17 +292,17 @@ public class CombatManager : MonoBehaviour
                 E[i].gameObject.SetActive(true);
                 CombatProfile CX = E[i].GetComponent<CombatProfile>();
                 CX.Name = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Name;
-                CX.Health = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Health;
-                CX.Magic = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Magic;
-                CX.Attack = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Attack;
-                CX.Resonance = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Resonance;
-                CX.Defence = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Defence;
-                CX.Constitution = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Constitution;
-                CX.Evasion = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Evasion;
-                CX.Accuracy = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Accuracy;
+                CX.MyStats.Health = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].MyStats.Health;
+                CX.MyStats.Magic = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].MyStats.Magic;
+                CX.MyStats.Attack = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].MyStats.Attack;
+                CX.MyStats.Resonance = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].MyStats.Resonance;
+                CX.MyStats.Defence = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].MyStats.Defence;
+                CX.MyStats.Constitution = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].MyStats.Constitution;
+                CX.MyStats.Evasion = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].MyStats.Evasion;
+                CX.MyStats.Accuracy = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].MyStats.Accuracy;
                 CX.PositiveAttribute = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].PositiveAttribute;
                 CX.NegativeAttribute = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].NegativeAttribute;
-                CX.SkillList = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].SkillList;
+                CX.Weapon = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Weapon;
                 EnemiesBuilt++;
 
             }
@@ -328,17 +328,17 @@ public class CombatManager : MonoBehaviour
                 E[i].gameObject.SetActive(true);
                 CombatProfile CX = E[i].GetComponent<CombatProfile>();
                 CX.Name = Ark.Combatants[CS.PlayerCombatants[i]].Name;
-                CX.Health = Ark.Combatants[CS.PlayerCombatants[i]].Health;
-                CX.Magic = Ark.Combatants[CS.PlayerCombatants[i]].Magic;
-                CX.Attack = Ark.Combatants[CS.PlayerCombatants[i]].Attack;
-                CX.Resonance = Ark.Combatants[CS.PlayerCombatants[i]].Resonance;
-                CX.Defence = Ark.Combatants[CS.PlayerCombatants[i]].Defence;
-                CX.Constitution = Ark.Combatants[CS.PlayerCombatants[i]].Constitution;
-                CX.Evasion = Ark.Combatants[CS.PlayerCombatants[i]].Evasion;
-                CX.Accuracy = Ark.Combatants[CS.PlayerCombatants[i]].Accuracy;
+                CX.MyStats.Health = Ark.Combatants[CS.PlayerCombatants[i]].MyStats.Health;
+                CX.MyStats.Magic = Ark.Combatants[CS.PlayerCombatants[i]].MyStats.Magic;
+                CX.MyStats.Attack = Ark.Combatants[CS.PlayerCombatants[i]].MyStats.Attack;
+                CX.MyStats.Resonance = Ark.Combatants[CS.PlayerCombatants[i]].MyStats.Resonance;
+                CX.MyStats.Defence = Ark.Combatants[CS.PlayerCombatants[i]].MyStats.Defence;
+                CX.MyStats.Constitution = Ark.Combatants[CS.PlayerCombatants[i]].MyStats.Constitution;
+                CX.MyStats.Evasion = Ark.Combatants[CS.PlayerCombatants[i]].MyStats.Evasion;
+                CX.MyStats.Accuracy = Ark.Combatants[CS.PlayerCombatants[i]].MyStats.Accuracy;
                 CX.PositiveAttribute = Ark.Combatants[CS.PlayerCombatants[i]].PositiveAttribute;
                 CX.NegativeAttribute = Ark.Combatants[CS.PlayerCombatants[i]].NegativeAttribute;
-                CX.SkillList = Ark.Combatants[CS.PlayerCombatants[i]].SkillList;
+                CX.Weapon = Ark.Combatants[CS.PlayerCombatants[i]].Weapon;
 
             }
             else

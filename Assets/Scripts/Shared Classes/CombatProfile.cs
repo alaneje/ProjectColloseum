@@ -10,19 +10,11 @@ public class CombatProfile : MonoBehaviour
     public Stats MyStats;
     public Archive.Attribute[] PositiveAttribute;
     public Archive.Attribute[] NegativeAttribute;
-    [Header("Abilities")]
-    public int[] SkillList;
-    [Header("Depricated")]
-
-    public Vector2Int Health;
-    public Vector2Int Magic;
-    public int Attack;
-    public int Resonance;
-    public int Defence;
-    public int Constitution;
-    public int Speed;
-    public int Accuracy;
-    public int Evasion;
+    [Header("Equipment")]
+    public int Weapon;
+  //  [Header("Depricated")]
+  //  public int[] SkillList;
+   
     
     
   
@@ -31,11 +23,11 @@ public class CombatProfile : MonoBehaviour
     {
         if (Magic)
         {
-            Health.x -= Damage - (Resonance + 1);
+            MyStats.Health.x -= Damage - (MyStats.Resonance + 1);
         }
         else
         {
-            Health.x -= Damage - (Defence + 1);
+            MyStats.Health.x -= Damage - (MyStats.Defence + 1);
         }
         
     }

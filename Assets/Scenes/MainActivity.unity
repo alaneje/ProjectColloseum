@@ -764,6 +764,10 @@ MonoBehaviour:
   - {fileID: 2518475515021674554, guid: e7764367de13d6d4ba85ad4c5f20fc1b, type: 3}
   EnemyCombatants:
   - {fileID: 6852962140020638021, guid: 5191aff0be850724ca28b3ad8929f166, type: 3}
+  WeaponList:
+  - {fileID: 8852839285058880708, guid: 3f2a9304056a8254a81384bdee6d83d3, type: 3}
+  - {fileID: 6405569329323156965, guid: 2b4853da7e08a3f4b8f639cadc0406de, type: 3}
+  - {fileID: 0}
 --- !u!114 &1181927589
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 28023102}
   - component: {fileID: 28023101}
   - component: {fileID: 28023100}
+  - component: {fileID: 28023106}
   m_Layer: 0
   m_Name: PlayerComatent1 (5)
   m_TagString: Player
@@ -238,19 +239,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Derek
   StatGroup: 0
-  MyStats: {fileID: 0}
+  MyStats: {fileID: 28023106}
   PositiveAttribute: 0700000008000000
   NegativeAttribute: 0100000005000000
+  Weapon: 0
   SkillList: 0000000001000000
-  Health: {x: 69, y: 69}
-  Magic: {x: 0, y: 0}
-  Attack: 62
-  Resonance: 20
-  Defence: 20
-  Constitution: 20
-  Speed: 20
-  Accuracy: 20
-  Evasion: 20
 --- !u!114 &28023104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,6 +272,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &28023106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28023099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237090cd3b4d3ff44b249ffdf6b4f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
 --- !u!1 &53849134
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,6 +307,7 @@ GameObject:
   - component: {fileID: 53849137}
   - component: {fileID: 53849136}
   - component: {fileID: 53849135}
+  - component: {fileID: 53849141}
   m_Layer: 0
   m_Name: PlayerComatent1 (4)
   m_TagString: Player
@@ -394,19 +409,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Gareth
   StatGroup: 0
-  MyStats: {fileID: 0}
+  MyStats: {fileID: 53849141}
   PositiveAttribute: 0700000008000000
   NegativeAttribute: 0100000005000000
+  Weapon: 0
   SkillList: 00000000010000000100000000000000
-  Health: {x: 69, y: 69}
-  Magic: {x: 0, y: 0}
-  Attack: 62
-  Resonance: 20
-  Defence: 20
-  Constitution: 20
-  Speed: 20
-  Accuracy: 20
-  Evasion: 20
 --- !u!114 &53849139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,6 +442,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &53849141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53849134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237090cd3b4d3ff44b249ffdf6b4f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
 --- !u!1 &139915739
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +676,7 @@ GameObject:
   - component: {fileID: 245498697}
   - component: {fileID: 245498696}
   - component: {fileID: 245498695}
+  - component: {fileID: 245498701}
   m_Layer: 0
   m_Name: Enemy1 (7)
   m_TagString: Enemy
@@ -749,19 +778,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   StatGroup: 0
-  MyStats: {fileID: 0}
+  MyStats: {fileID: 245498701}
   PositiveAttribute: 
   NegativeAttribute: 
+  Weapon: 0
   SkillList: 
-  Health: {x: 0, y: 0}
-  Magic: {x: 0, y: 0}
-  Attack: 0
-  Resonance: 0
-  Defence: 0
-  Constitution: 0
-  Speed: 0
-  Accuracy: 0
-  Evasion: 0
 --- !u!114 &245498699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -791,6 +812,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &245498701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245498694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237090cd3b4d3ff44b249ffdf6b4f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
 --- !u!1 &285554018
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,6 +847,7 @@ GameObject:
   - component: {fileID: 285554021}
   - component: {fileID: 285554020}
   - component: {fileID: 285554019}
+  - component: {fileID: 285554025}
   m_Layer: 0
   m_Name: PlayerComatent1 (2)
   m_TagString: Player
@@ -906,19 +949,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Derek
   StatGroup: 0
-  MyStats: {fileID: 0}
+  MyStats: {fileID: 285554025}
   PositiveAttribute: 0700000008000000
   NegativeAttribute: 0100000005000000
+  Weapon: 0
   SkillList: 0000000001000000
-  Health: {x: 69, y: 69}
-  Magic: {x: 0, y: 0}
-  Attack: 62
-  Resonance: 20
-  Defence: 20
-  Constitution: 20
-  Speed: 20
-  Accuracy: 20
-  Evasion: 20
 --- !u!114 &285554023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -947,6 +982,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &285554025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285554018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237090cd3b4d3ff44b249ffdf6b4f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
 --- !u!1 &524720963
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,6 +1096,7 @@ GameObject:
   - component: {fileID: 538063245}
   - component: {fileID: 538063244}
   - component: {fileID: 538063243}
+  - component: {fileID: 538063249}
   m_Layer: 0
   m_Name: PlayerComatent1 (3)
   m_TagString: Player
@@ -1141,19 +1198,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Derek
   StatGroup: 0
-  MyStats: {fileID: 0}
+  MyStats: {fileID: 538063249}
   PositiveAttribute: 0700000008000000
   NegativeAttribute: 0100000005000000
+  Weapon: 0
   SkillList: 0000000001000000
-  Health: {x: 69, y: 69}
-  Magic: {x: 0, y: 0}
-  Attack: 62
-  Resonance: 20
-  Defence: 20
-  Constitution: 20
-  Speed: 20
-  Accuracy: 20
-  Evasion: 20
 --- !u!114 &538063247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1182,6 +1231,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &538063249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538063242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237090cd3b4d3ff44b249ffdf6b4f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
 --- !u!1 &582219459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,6 +1399,7 @@ GameObject:
   - component: {fileID: 641109499}
   - component: {fileID: 641109500}
   - component: {fileID: 641109501}
+  - component: {fileID: 641109505}
   m_Layer: 0
   m_Name: PlayerComatent1
   m_TagString: Player
@@ -1458,19 +1529,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Gareth
   StatGroup: 0
-  MyStats: {fileID: 0}
+  MyStats: {fileID: 641109505}
   PositiveAttribute: 0700000008000000
   NegativeAttribute: 0100000005000000
+  Weapon: 0
   SkillList: 00000000010000000100000000000000
-  Health: {x: 69, y: 69}
+--- !u!114 &641109505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641109498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237090cd3b4d3ff44b249ffdf6b4f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {x: 0, y: 0}
   Magic: {x: 0, y: 0}
-  Attack: 62
-  Resonance: 20
-  Defence: 20
-  Constitution: 20
-  Speed: 20
-  Accuracy: 20
-  Evasion: 20
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
 --- !u!1 &679696149
 GameObject:
   m_ObjectHideFlags: 0
@@ -1633,6 +1717,7 @@ GameObject:
   - component: {fileID: 782678366}
   - component: {fileID: 782678365}
   - component: {fileID: 782678364}
+  - component: {fileID: 782678370}
   m_Layer: 0
   m_Name: PlayerComatent1 (7)
   m_TagString: Player
@@ -1734,19 +1819,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Derek
   StatGroup: 0
-  MyStats: {fileID: 0}
+  MyStats: {fileID: 782678370}
   PositiveAttribute: 0700000008000000
   NegativeAttribute: 0100000005000000
+  Weapon: 0
   SkillList: 0000000001000000
-  Health: {x: 69, y: 69}
-  Magic: {x: 0, y: 0}
-  Attack: 62
-  Resonance: 20
-  Defence: 20
-  Constitution: 20
-  Speed: 20
-  Accuracy: 20
-  Evasion: 20
 --- !u!114 &782678368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1775,6 +1852,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &782678370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782678363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237090cd3b4d3ff44b249ffdf6b4f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
 --- !u!1 &786671656
 GameObject:
   m_ObjectHideFlags: 0
@@ -2078,6 +2176,7 @@ GameObject:
   - component: {fileID: 888132423}
   - component: {fileID: 888132422}
   - component: {fileID: 888132421}
+  - component: {fileID: 888132427}
   m_Layer: 0
   m_Name: Enemy1 (5)
   m_TagString: Enemy
@@ -2179,19 +2278,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   StatGroup: 0
-  MyStats: {fileID: 0}
+  MyStats: {fileID: 888132427}
   PositiveAttribute: 
   NegativeAttribute: 
+  Weapon: 0
   SkillList: 
-  Health: {x: 0, y: 0}
-  Magic: {x: 0, y: 0}
-  Attack: 0
-  Resonance: 0
-  Defence: 0
-  Constitution: 0
-  Speed: 0
-  Accuracy: 0
-  Evasion: 0
 --- !u!114 &888132425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2221,6 +2312,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &888132427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888132420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237090cd3b4d3ff44b249ffdf6b4f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
 --- !u!1 &919293058
 GameObject:
   m_ObjectHideFlags: 0
@@ -3158,6 +3270,7 @@ GameObject:
   - component: {fileID: 1294660401}
   - component: {fileID: 1294660400}
   - component: {fileID: 1294660399}
+  - component: {fileID: 1294660405}
   m_Layer: 0
   m_Name: PlayerComatent1 (1)
   m_TagString: Player
@@ -3259,19 +3372,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Derek
   StatGroup: 0
-  MyStats: {fileID: 0}
+  MyStats: {fileID: 1294660405}
   PositiveAttribute: 0700000008000000
   NegativeAttribute: 0100000005000000
+  Weapon: 0
   SkillList: 0000000001000000
-  Health: {x: 69, y: 69}
-  Magic: {x: 0, y: 0}
-  Attack: 62
-  Resonance: 20
-  Defence: 20
-  Constitution: 20
-  Speed: 20
-  Accuracy: 20
-  Evasion: 20
 --- !u!114 &1294660403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3300,6 +3405,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1294660405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294660398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237090cd3b4d3ff44b249ffdf6b4f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
 --- !u!1 &1310490940
 GameObject:
   m_ObjectHideFlags: 0
@@ -3314,6 +3440,7 @@ GameObject:
   - component: {fileID: 1310490943}
   - component: {fileID: 1310490942}
   - component: {fileID: 1310490941}
+  - component: {fileID: 1310490947}
   m_Layer: 0
   m_Name: Enemy1 (4)
   m_TagString: Enemy
@@ -3415,19 +3542,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   StatGroup: 0
-  MyStats: {fileID: 0}
+  MyStats: {fileID: 1310490947}
   PositiveAttribute: 
   NegativeAttribute: 
+  Weapon: 0
   SkillList: 
-  Health: {x: 0, y: 0}
-  Magic: {x: 0, y: 0}
-  Attack: 0
-  Resonance: 0
-  Defence: 0
-  Constitution: 0
-  Speed: 0
-  Accuracy: 0
-  Evasion: 0
 --- !u!114 &1310490945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3457,6 +3576,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1310490947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310490940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237090cd3b4d3ff44b249ffdf6b4f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
 --- !u!1 &1333980311
 GameObject:
   m_ObjectHideFlags: 0
@@ -3786,6 +3926,7 @@ GameObject:
   - component: {fileID: 1618654753}
   - component: {fileID: 1618654749}
   - component: {fileID: 1618654750}
+  - component: {fileID: 1618654751}
   m_Layer: 0
   m_Name: Enemy1 (1)
   m_TagString: Enemy
@@ -3807,19 +3948,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   StatGroup: 0
-  MyStats: {fileID: 0}
+  MyStats: {fileID: 1618654751}
   PositiveAttribute: 
   NegativeAttribute: 
+  Weapon: 0
   SkillList: 
-  Health: {x: 0, y: 0}
-  Magic: {x: 0, y: 0}
-  Attack: 0
-  Resonance: 0
-  Defence: 0
-  Constitution: 0
-  Speed: 0
-  Accuracy: 0
-  Evasion: 0
 --- !u!114 &1618654748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3900,6 +4033,27 @@ CapsuleCollider:
   m_Height: 0.32
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1618654751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618654746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237090cd3b4d3ff44b249ffdf6b4f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
 --- !u!4 &1618654752
 Transform:
   m_ObjectHideFlags: 0
@@ -4076,6 +4230,7 @@ GameObject:
   - component: {fileID: 1689475001}
   - component: {fileID: 1689474997}
   - component: {fileID: 1689474998}
+  - component: {fileID: 1689474999}
   m_Layer: 0
   m_Name: Enemy1 (2)
   m_TagString: Enemy
@@ -4097,19 +4252,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   StatGroup: 0
-  MyStats: {fileID: 0}
+  MyStats: {fileID: 1689474999}
   PositiveAttribute: 
   NegativeAttribute: 
+  Weapon: 0
   SkillList: 
-  Health: {x: 0, y: 0}
-  Magic: {x: 0, y: 0}
-  Attack: 0
-  Resonance: 0
-  Defence: 0
-  Constitution: 0
-  Speed: 0
-  Accuracy: 0
-  Evasion: 0
 --- !u!114 &1689474996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4190,6 +4337,27 @@ CapsuleCollider:
   m_Height: 0.32
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1689474999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689474994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237090cd3b4d3ff44b249ffdf6b4f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
 --- !u!4 &1689475000
 Transform:
   m_ObjectHideFlags: 0
@@ -4233,6 +4401,7 @@ GameObject:
   - component: {fileID: 1692480761}
   - component: {fileID: 1692480760}
   - component: {fileID: 1692480759}
+  - component: {fileID: 1692480765}
   m_Layer: 0
   m_Name: Enemy1 (3)
   m_TagString: Enemy
@@ -4334,19 +4503,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   StatGroup: 0
-  MyStats: {fileID: 0}
+  MyStats: {fileID: 1692480765}
   PositiveAttribute: 
   NegativeAttribute: 
+  Weapon: 0
   SkillList: 
-  Health: {x: 0, y: 0}
-  Magic: {x: 0, y: 0}
-  Attack: 0
-  Resonance: 0
-  Defence: 0
-  Constitution: 0
-  Speed: 0
-  Accuracy: 0
-  Evasion: 0
 --- !u!114 &1692480763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4376,6 +4537,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1692480765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692480758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237090cd3b4d3ff44b249ffdf6b4f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
 --- !u!1 &1753049830
 GameObject:
   m_ObjectHideFlags: 0
@@ -4390,6 +4572,7 @@ GameObject:
   - component: {fileID: 1753049837}
   - component: {fileID: 1753049831}
   - component: {fileID: 1753049832}
+  - component: {fileID: 1753049833}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Enemy
@@ -4462,6 +4645,27 @@ CapsuleCollider:
   m_Height: 0.32
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1753049833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753049830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237090cd3b4d3ff44b249ffdf6b4f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
 --- !u!4 &1753049834
 Transform:
   m_ObjectHideFlags: 0
@@ -4505,19 +4709,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   StatGroup: 0
-  MyStats: {fileID: 0}
+  MyStats: {fileID: 1753049833}
   PositiveAttribute: 
   NegativeAttribute: 
+  Weapon: 0
   SkillList: 
-  Health: {x: 0, y: 0}
-  Magic: {x: 0, y: 0}
-  Attack: 0
-  Resonance: 0
-  Defence: 0
-  Constitution: 0
-  Speed: 0
-  Accuracy: 0
-  Evasion: 0
 --- !u!114 &1753049837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4547,6 +4743,7 @@ GameObject:
   - component: {fileID: 1970509356}
   - component: {fileID: 1970509355}
   - component: {fileID: 1970509354}
+  - component: {fileID: 1970509360}
   m_Layer: 0
   m_Name: PlayerComatent1 (6)
   m_TagString: Player
@@ -4648,19 +4845,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Derek
   StatGroup: 0
-  MyStats: {fileID: 0}
+  MyStats: {fileID: 1970509360}
   PositiveAttribute: 0700000008000000
   NegativeAttribute: 0100000005000000
+  Weapon: 0
   SkillList: 0000000001000000
-  Health: {x: 69, y: 69}
-  Magic: {x: 0, y: 0}
-  Attack: 62
-  Resonance: 20
-  Defence: 20
-  Constitution: 20
-  Speed: 20
-  Accuracy: 20
-  Evasion: 20
 --- !u!114 &1970509358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4689,6 +4878,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1970509360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970509353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237090cd3b4d3ff44b249ffdf6b4f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
 --- !u!1 &2019462710
 GameObject:
   m_ObjectHideFlags: 0
@@ -4703,6 +4913,7 @@ GameObject:
   - component: {fileID: 2019462713}
   - component: {fileID: 2019462712}
   - component: {fileID: 2019462711}
+  - component: {fileID: 2019462717}
   m_Layer: 0
   m_Name: Enemy1 (6)
   m_TagString: Enemy
@@ -4804,19 +5015,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   StatGroup: 0
-  MyStats: {fileID: 0}
+  MyStats: {fileID: 2019462717}
   PositiveAttribute: 
   NegativeAttribute: 
+  Weapon: 0
   SkillList: 
-  Health: {x: 0, y: 0}
-  Magic: {x: 0, y: 0}
-  Attack: 0
-  Resonance: 0
-  Defence: 0
-  Constitution: 0
-  Speed: 0
-  Accuracy: 0
-  Evasion: 0
 --- !u!114 &2019462715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4846,6 +5049,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2019462717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019462710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237090cd3b4d3ff44b249ffdf6b4f78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {x: 0, y: 0}
+  Magic: {x: 0, y: 0}
+  Attack: 0
+  Resonance: 0
+  Defence: 0
+  Constitution: 0
+  Speed: 0
+  Accuracy: 0
+  Evasion: 0
 --- !u!1 &2131810122
 GameObject:
   m_ObjectHideFlags: 0

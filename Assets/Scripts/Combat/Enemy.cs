@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
 
     public void EndLife()
     {
-        if(EnemyProfile.Health.x < 1)
+        if(EnemyProfile.MyStats.Health.x < 1)
         {
             // this.gameObject.tag = "NOENEMY";
             HandleDeath();
@@ -39,7 +39,7 @@ public class Enemy : MonoBehaviour
 
     public void ApplyDamage(int Damage)
     {
-        EnemyProfile.Health.x -= Damage;
+        EnemyProfile.MyStats.Health.x -= Damage;
     }
 
     void HandleDeath()
