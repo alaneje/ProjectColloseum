@@ -392,4 +392,11 @@ public class CombatManager : MonoBehaviour
         return EnemiesBuilt;
     }
 
+    public void ReturnToMenu()
+    {
+        CombatScenario CS = Ark.gameObject.GetComponent<CombatScenario>();
+        SceneMaster.LoadScene(CS.Home);
+        SceneMaster.UnloadScene(this.gameObject.scene.name);
+    }//Return to Menu after gameplay. 
+
 }

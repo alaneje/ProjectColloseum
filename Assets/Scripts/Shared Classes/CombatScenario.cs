@@ -7,4 +7,6 @@ public class CombatScenario : MonoBehaviour
     public int[] PlayerCombatants;
     public int[] EnemyCombatants;
 
+    public string Home;
+
 }

@@ -193,16 +193,7 @@ MonoBehaviour:
   MyStats: {fileID: 168741820}
   PositiveAttribute: 
   NegativeAttribute: 
-  SkillList: 
-  Health: {x: 0, y: 0}
-  Magic: {x: 0, y: 0}
-  Attack: 0
-  Resonance: 0
-  Defence: 0
-  Constitution: 0
-  Speed: 0
-  Accuracy: 0
-  Evasion: 0
+  Weapon: 0
 --- !u!1 &248349574
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,16 +264,7 @@ MonoBehaviour:
   MyStats: {fileID: 248349576}
   PositiveAttribute: 
   NegativeAttribute: 
-  SkillList: 
-  Health: {x: 0, y: 0}
-  Magic: {x: 0, y: 0}
-  Attack: 0
-  Resonance: 0
-  Defence: 0
-  Constitution: 0
-  Speed: 0
-  Accuracy: 0
-  Evasion: 0
+  Weapon: 0
 --- !u!1 &367503039
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,16 +335,7 @@ MonoBehaviour:
   MyStats: {fileID: 367503041}
   PositiveAttribute: 
   NegativeAttribute: 
-  SkillList: 
-  Health: {x: 0, y: 0}
-  Magic: {x: 0, y: 0}
-  Attack: 0
-  Resonance: 0
-  Defence: 0
-  Constitution: 0
-  Speed: 0
-  Accuracy: 0
-  Evasion: 0
+  Weapon: 0
 --- !u!1 &611041814
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,16 +385,7 @@ MonoBehaviour:
   MyStats: {fileID: 611041817}
   PositiveAttribute: 0700000008000000
   NegativeAttribute: 0100000005000000
-  SkillList: 0000000001000000
-  Health: {x: 69, y: 69}
-  Magic: {x: 0, y: 0}
-  Attack: 62
-  Resonance: 20
-  Defence: 20
-  Constitution: 20
-  Speed: 20
-  Accuracy: 20
-  Evasion: 20
+  Weapon: 0
 --- !u!114 &611041817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492,16 +456,7 @@ MonoBehaviour:
   MyStats: {fileID: 709813715}
   PositiveAttribute: 0700000008000000
   NegativeAttribute: 0100000005000000
-  SkillList: 00000000010000000100000000000000
-  Health: {x: 69, y: 69}
-  Magic: {x: 0, y: 0}
-  Attack: 62
-  Resonance: 20
-  Defence: 20
-  Constitution: 20
-  Speed: 20
-  Accuracy: 20
-  Evasion: 20
+  Weapon: 0
 --- !u!114 &709813715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,16 +548,7 @@ MonoBehaviour:
   MyStats: {fileID: 715652334}
   PositiveAttribute: 
   NegativeAttribute: 
-  SkillList: 
-  Health: {x: 0, y: 0}
-  Magic: {x: 0, y: 0}
-  Attack: 0
-  Resonance: 0
-  Defence: 0
-  Constitution: 0
-  Speed: 0
-  Accuracy: 0
-  Evasion: 0
+  Weapon: 0
 --- !u!1 &765881134
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,16 +619,7 @@ MonoBehaviour:
   MyStats: {fileID: 765881136}
   PositiveAttribute: 
   NegativeAttribute: 
-  SkillList: 
-  Health: {x: 0, y: 0}
-  Magic: {x: 0, y: 0}
-  Attack: 0
-  Resonance: 0
-  Defence: 0
-  Constitution: 0
-  Speed: 0
-  Accuracy: 0
-  Evasion: 0
+  Weapon: 0
 --- !u!1 &1181927586
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,6 +719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerCombatants: 0000000001000000
   EnemyCombatants: 000000000000000000000000
+  Home: LoadIntoScene
 --- !u!1 &1359328221
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,16 +769,7 @@ MonoBehaviour:
   MyStats: {fileID: 1359328225}
   PositiveAttribute: 
   NegativeAttribute: 
-  SkillList: 
-  Health: {x: 0, y: 0}
-  Magic: {x: 0, y: 0}
-  Attack: 0
-  Resonance: 0
-  Defence: 0
-  Constitution: 0
-  Speed: 0
-  Accuracy: 0
-  Evasion: 0
+  Weapon: 0
 --- !u!114 &1359328225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -972,16 +901,7 @@ MonoBehaviour:
   MyStats: {fileID: 1794179347}
   PositiveAttribute: 
   NegativeAttribute: 
-  SkillList: 
-  Health: {x: 0, y: 0}
-  Magic: {x: 0, y: 0}
-  Attack: 0
-  Resonance: 0
-  Defence: 0
-  Constitution: 0
-  Speed: 0
-  Accuracy: 0
-  Evasion: 0
+  Weapon: 0
 --- !u!1 &1827963603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,16 +972,7 @@ MonoBehaviour:
   MyStats: {fileID: 1827963605}
   PositiveAttribute: 
   NegativeAttribute: 
-  SkillList: 
-  Health: {x: 0, y: 0}
-  Magic: {x: 0, y: 0}
-  Attack: 0
-  Resonance: 0
-  Defence: 0
-  Constitution: 0
-  Speed: 0
-  Accuracy: 0
-  Evasion: 0
+  Weapon: 0
 --- !u!1 &1834397205
 GameObject:
   m_ObjectHideFlags: 0
