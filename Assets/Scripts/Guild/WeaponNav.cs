@@ -95,7 +95,10 @@ public class WeaponNav : MonoBehaviour
         {
             if(i < Ark.WeaponList.Length)
             {
-                if(Ark.WeaponStorage[i] > 0)
+
+                if(CurrentMode == Mode.Swap || CurrentMode == Mode.Sell)
+                {
+                    if(Ark.WeaponStorage[i] > 0)
                 {
                     WeaponButtonList[i].interactable = true;
                 }
@@ -103,6 +106,13 @@ public class WeaponNav : MonoBehaviour
                 {
                     WeaponButtonList[i].interactable = false;
                 }
+                }
+
+                if(CurrentMode == Mode.View)
+                {
+                    WeaponButtonList[i].interactable = true;
+                }
+                
                 
                 WeaponButtonNameList[i].text = Ark.WeaponList[i].WeaponName;
                 if(i !=0)
