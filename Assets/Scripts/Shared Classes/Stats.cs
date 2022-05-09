@@ -20,7 +20,25 @@ public class Stats : MonoBehaviour
     int StatMin = 0;
     public void StatsSafetyCheck()
     {
+        if(Health.y < StatMin) { Health.y = StatMin; }
+        if(Magic.y < StatMin) { Magic.y = StatMin; }
+        if(Attack < StatMin) { Attack = StatMin; }
+        if(Resonance < StatMin) { Resonance = StatMin; }
+        if(Defence < StatMin) { Defence = StatMin; }
+        if(Constitution < StatMin) { Constitution = StatMin; }
+        if(Speed < StatMin) { Speed = StatMin; }
+        if(Accuracy < StatMin) { Accuracy = StatMin; }
+        if(Evasion < StatMin) { Evasion = StatMin; }
 
+        if(Health.y > StatMax) { Health.y = StatMax; }
+        if(Magic.y > StatMax) { Magic.y = StatMax; }
+        if(Attack > StatMax) { Attack = StatMax; }
+        if(Resonance > StatMax) { Resonance = StatMax; }
+        if(Defence > StatMax) { Defence = StatMax; }
+        if(Constitution > StatMax) { Constitution = StatMax; }
+        if(Speed > StatMax) { Speed = StatMax; }
+        if(Accuracy > StatMax) { Accuracy = StatMax; }
+        if(Evasion > StatMax) { Evasion = StatMax; }
     }
 
     public Stats ReturnRandomisedStats(int SetNumber)
