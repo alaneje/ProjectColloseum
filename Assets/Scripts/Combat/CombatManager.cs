@@ -7,6 +7,7 @@ public class CombatManager : MonoBehaviour
 {
     public enum TurnPahses {PreTurn,TurnAbility, PostTurn}
     public TurnPahses CurrentTurnPhase;
+    public Grid TheGrid;
     public Archive Ark;
     public CombatPlayer[] PlayerCombatants;
     public Enemy[] Enemies;
@@ -54,7 +55,7 @@ public class CombatManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        /*
         CombatUIPannel.SetActive(!InTurnGameplay);
 
         if (InTurnGameplay) { TurnUpdates(); }
@@ -62,7 +63,7 @@ public class CombatManager : MonoBehaviour
         if (!InTurnGameplay)
         {
             TargettingArrowPositionUpdate();
-        }
+        }*/
 
         CombatUI();
     }
