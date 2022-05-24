@@ -7,6 +7,9 @@ public class GuildManager : MonoBehaviour
 {
     [Header("UI Elements")]
     public WeaponNav WeaponsMenu;
+    public CombatantListPannel combatantListPannel;
+    [Header("Screens")]
+    public GameObject CardCurrentCombatantScreen;
     [Header("OnScreen Card")]
     public Text CardName;
     public Text CardAV;
@@ -14,6 +17,9 @@ public class GuildManager : MonoBehaviour
     public Text CardWeapon;
     public Text CardMana;
     public Image CardIMG;
+    public Button PreviousCombatant;
+    public Button NextCombatant;
+    
 
 
 
@@ -30,7 +36,8 @@ public class GuildManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    CardUIGenerator();    
+    CardUIGenerator();   
+    CombatUIDirectionArrowUpdate(); 
     }
 
     void CardUIGenerator()
@@ -42,8 +49,29 @@ public class GuildManager : MonoBehaviour
         CardWeapon.text = "Weapon: " + Ark.WeaponList[Ark.Combatants[CurrentCard].Weapon].WeaponName;
     }
 
+    void CombatUIDirectionArrowUpdate()
+    {
+        if(CurrentCard == 0){PreviousCombatant.interactable = false; NextCombatant.interactable = true;}
+        if(CurrentCard == (Ark.Combatants.Length -1)){PreviousCombatant.interactable = true; NextCombatant.interactable = false;}
+        if(CurrentCard > 0 && CurrentCard < (Ark.Combatants.Length - 2)){PreviousCombatant.interactable = true; NextCombatant.interactable = true;}
+
+    }//conditions for buttons in the list
+
+    public void ChangeCombatant(int Direction)
+    {
+            CurrentCard += Direction;
+    }
+
     public void OpenSwapsMenu()
     {
         WeaponsMenu.OpenSwapMenu(CurrentCard);
+    }
+    public void GetCombatantFromScrren()
+    {
+        CurrentCard = combatantListPannel.SelectedCombatant;
+    }
+    public void ChangeCurrentCombatantMenuState(bool State)
+    {
+        CardCurrentCombatantScreen.SetActive(State);
     }
 }
