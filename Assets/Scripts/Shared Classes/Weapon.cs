@@ -5,6 +5,6 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public string WeaponName;
-    public Stats WeaponStats;
+    public i_Stats WeaponStats;
     public int[] SkillList;
 }

@@ -247,7 +247,7 @@ public class TestingBuildUI : MonoBehaviour
         Ark.Combatants[CurrentCombatant].PositiveAttribute = Ark.CombatantsList[CurrentNew].PositiveAttribute;
         Ark.Combatants[CurrentCombatant].NegativeAttribute = Ark.CombatantsList[CurrentNew].NegativeAttribute;
         Ark.Combatants[CurrentCombatant].Name = Ark.CombatantsList[CurrentNew].Name;
-        Stats X = new Stats();
+        i_Stats X = new i_Stats();
         Ark.Combatants[CurrentCombatant].MyStats = X.ReturnRandomisedStats(Ark.CombatantsList[CurrentNew].StatGroup);
 
         LoadCharacter();

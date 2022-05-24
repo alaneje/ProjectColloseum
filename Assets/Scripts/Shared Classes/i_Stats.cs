@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Stats : MonoBehaviour
+public class i_Stats : MonoBehaviour
 {
 
     public Vector2Int Health;
@@ -52,9 +52,9 @@ public class Stats : MonoBehaviour
 
     }
 
-    public Stats ReturnRandomisedStats(int SetNumber)
+    public i_Stats ReturnRandomisedStats(int SetNumber)
     {
-        Stats returnedstats = new Stats();
+        i_Stats returnedstats = new i_Stats();
 
         Vector2Int[,] matrix = buildmatrix() ;
 
