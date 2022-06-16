@@ -54,4 +54,9 @@ public class GridActor : MonoBehaviour
         
 
     }
+
+    public bool GetInPosition()
+    {
+        return InPosition;
+    }
 }

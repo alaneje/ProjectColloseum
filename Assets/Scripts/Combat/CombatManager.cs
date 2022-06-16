@@ -30,6 +30,7 @@ public class CombatManager : MonoBehaviour
     public Text PlayerHealthText;
     public Button[] AbilityButtons;
     public Text[] AbilityButtonText;
+    public Button[] MovementButtons;
 
     bool InTurnGameplay;
     bool InTurnAbilityLock;
@@ -68,6 +69,7 @@ public class CombatManager : MonoBehaviour
         }*/
 
         CombatUI();
+        MovementButtonUpdates();
     }
 
     void CombatUI()
@@ -90,6 +92,18 @@ public class CombatManager : MonoBehaviour
                 AbilityButtons[i].interactable = false;
                 AbilityButtonText[i].text = "";
             }
+            i++;
+        }
+    }
+
+    void MovementButtonUpdates()
+    {
+        GridActor Selected = PlayerCombatants[CurrentPlayer].gameObject.GetComponent<GridActor>();
+        bool CanMove = Selected.GetInPosition();
+        int i = 0;
+        while(i != MovementButtons.Length)
+        {
+            MovementButtons[i].interactable = CanMove;
             i++;
         }
     }
@@ -401,5 +415,22 @@ public class CombatManager : MonoBehaviour
         SceneMaster.LoadScene(CS.Home);
         SceneMaster.UnloadScene(this.gameObject.scene.name);
     }//Return to Menu after gameplay. 
+
+    public void MoveSelectedPlayer(int Pos)
+    {
+        Vector2Int[] Var = new Vector2Int[4];
+        Var[0] = Vector2Int.up;
+        Var[1] = Vector2Int.down;
+        Var[2] = Vector2Int.left;
+        Var[3] = Vector2Int.right;
+
+        GridActor Selected = PlayerCombatants[CurrentPlayer].gameObject.GetComponent<GridActor>();
+        if (Selected.GetInPosition())
+        {
+            Selected.Position = Selected.Position + Var[Pos];//Move character
+        }
+        
+
+    }
 
 }
