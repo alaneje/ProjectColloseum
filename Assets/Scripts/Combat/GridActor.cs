@@ -6,6 +6,10 @@ public class GridActor : MonoBehaviour
 {
        public Vector2Int Position;
        bool InPosition;
+    bool LeftClear;
+    bool RightClear;
+    bool UpClear;
+    bool DownClear;
    
    // public int StackCount;
     CombatManager CombatManager;
@@ -41,7 +45,7 @@ public class GridActor : MonoBehaviour
     {
         UpdatePositionToGrid();
         IsInPosition();
-
+        CheckCanMove();
         Vector3Int lPos = new Vector3Int(Position.x, Position.y, 0);
         if (CombatManager.tilemap.GetTile(lPos) != null)
         {
@@ -55,8 +59,58 @@ public class GridActor : MonoBehaviour
 
     }
 
+    void CheckCanMove()
+    {
+        Vector3Int lPos = new Vector3Int(Position.x, Position.y, 0);
+        if (CombatManager.tilemap.GetTile(lPos + Vector3Int.up) != null)
+        {
+            UpClear = true;
+        }
+        else
+        {
+            UpClear = false;
+        }
+        if (CombatManager.tilemap.GetTile(lPos + Vector3Int.down) != null)
+        {
+            DownClear = true;
+        }
+        else
+        {
+            DownClear = false;
+        }
+        if (CombatManager.tilemap.GetTile(lPos + Vector3Int.left) != null)
+        {
+            LeftClear = true;
+        }
+        else
+        {
+            LeftClear = false;
+        }
+        if (CombatManager.tilemap.GetTile(lPos + Vector3Int.right) != null)
+        {
+            RightClear = true;
+        }
+        else
+        {
+            RightClear = false;
+        }
+    }
+
     public bool GetInPosition()
     {
         return InPosition;
+    }
+
+    public bool GetCanMove(int Button)
+    {
+        switch (Button)
+        {
+            case 0:return UpClear;
+            case 1:return DownClear;
+            case 2: return LeftClear;
+            case 3: return RightClear;
+            default: return false;
+        }
+        
     }
 }

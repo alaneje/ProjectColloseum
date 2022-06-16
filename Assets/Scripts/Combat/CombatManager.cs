@@ -103,7 +103,15 @@ public class CombatManager : MonoBehaviour
         int i = 0;
         while(i != MovementButtons.Length)
         {
-            MovementButtons[i].interactable = CanMove;
+            if(CanMove && Selected.GetCanMove(i))
+            {
+                MovementButtons[i].interactable = true;
+            }
+            else
+            {
+                MovementButtons[i].interactable = false;
+            }
+            
             i++;
         }
     }
@@ -425,7 +433,7 @@ public class CombatManager : MonoBehaviour
         Var[3] = Vector2Int.right;
 
         GridActor Selected = PlayerCombatants[CurrentPlayer].gameObject.GetComponent<GridActor>();
-        if (Selected.GetInPosition())
+        if (Selected.GetInPosition() && Selected.GetCanMove(Pos))
         {
             Selected.Position = Selected.Position + Var[Pos];//Move character
         }
