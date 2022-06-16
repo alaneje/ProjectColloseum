@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Tilemaps;
 
 public class CombatManager : MonoBehaviour
 {
     public enum TurnPahses {PreTurn,TurnAbility, PostTurn}
     public TurnPahses CurrentTurnPhase;
     public Grid TheGrid;
+    public Tilemap tilemap;
     public Archive Ark;
     public CombatPlayer[] PlayerCombatants;
     public Enemy[] Enemies;

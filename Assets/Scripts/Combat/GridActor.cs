@@ -41,5 +41,17 @@ public class GridActor : MonoBehaviour
     {
         UpdatePositionToGrid();
         IsInPosition();
+
+        Vector3Int lPos = new Vector3Int(Position.x, Position.y, 0);
+        if (CombatManager.tilemap.GetTile(lPos) != null)
+        {
+            Debug.Log("name : " + CombatManager.tilemap.GetTile(lPos).name + " & position : " + lPos);
+        }
+        else
+        {
+            Debug.Log("No Tile");
+        }
+        
+
     }
 }
