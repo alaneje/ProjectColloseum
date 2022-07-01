@@ -110,6 +110,8 @@ public class CombatManager : MonoBehaviour
             else
             {
                 MovementButtons[i].interactable = false;
+
+                
             }
             
             i++;
