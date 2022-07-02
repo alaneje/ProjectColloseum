@@ -14,6 +14,7 @@ public class CombatManager : MonoBehaviour
     public CombatPlayer[] PlayerCombatants;
     public Enemy[] Enemies;
     public CombatantTurnSubmission[] TurnCombatants;
+    public bool TimeActive;
     public int CurrentPlayer;
     public int CurrentTarget;
    // public int CurrentStackPos;
@@ -443,4 +444,20 @@ public class CombatManager : MonoBehaviour
 
     }
 
+    public void AnnounceTurnEnd()
+    {
+
+    }
+    public void StopTime()
+    {
+        TimeActive = false;
+    }
+    public void StartTime()
+    {
+        TimeActive = true;
+    }
+    public bool GetTime()
+    {
+        return TimeActive;
+    }
 }

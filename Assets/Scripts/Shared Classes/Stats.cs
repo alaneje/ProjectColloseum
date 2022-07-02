@@ -7,6 +7,7 @@ public class Stats : MonoBehaviour
 
     public Vector2Int Health;
     public Vector2Int Magic;
+    public int ActionPoints;
     public int Attack;
     public int Resonance;
     public int Defence;

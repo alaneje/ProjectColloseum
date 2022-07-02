@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     public float MagF;
 
     int selectedattack;
-
+    int ActionPoints = 3;
     float RangefromEnemy;
     bool notinRangeOfSelectedAttack;
     bool canMove = true;
@@ -28,23 +28,29 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(Tracking == null)
-        { 
-            RandomMovement();
-        }
-        else
+        if (combatManager.GetTime() && canMove)
         {
-            CheckAndUpdateRange();//Checks and updates the range from the Player we are tracking.
-            CheckIfInRangeForSelectedAttack();//Check if we're in the range of the selected attack
-            TrackingMovement();//activate tracking movement
-            AttackPlayerWithSelectedAttack();//attack the player
+            CheckActionPoints();
+            if (Tracking == null)
+            {
+                RandomMovement();
+            }
+            else
+            {
+                CheckAndUpdateRange();//Checks and updates the range from the Player we are tracking.
+                CheckIfInRangeForSelectedAttack();//Check if we're in the range of the selected attack
+                TrackingMovement();//activate tracking movement
+                AttackPlayerWithSelectedAttack();//attack the player
+            }
         }
+        
     }
     void AttackPlayerWithSelectedAttack()
     {
-        if(Tracking != null && !notinRangeOfSelectedAttack)
+        if(Tracking != null && !notinRangeOfSelectedAttack && canMove)
         {
             CombatAbilityProfile A = Instantiate(combatManager.Ark.CombatAbilities[combatManager.Ark.WeaponList[EnemyProfile.Weapon].SkillList[selectedattack]].gameObject, this.gameObject.transform.position, Quaternion.identity).GetComponent<CombatAbilityProfile>();
+            ActionPoints--;//use an action point.
             A.SetTeam = CombatAbilityProfile.Team.Enemy;//set the correct team
             A.PhysicalAttack = EnemyProfile.MyStats.Attack;
             A.MagicAttack = EnemyProfile.MyStats.Resonance;
@@ -106,6 +112,7 @@ public class Enemy : MonoBehaviour
                 case 3: MyGridActor.Position += Vector2Int.right; break;
 
             }
+            ActionPoints--;
         }
     }
     void RandomMovement()
@@ -129,8 +136,17 @@ public class Enemy : MonoBehaviour
                 case 3: MyGridActor.Position += Vector2Int.right; break;
 
             }
+            ActionPoints--;
         }
     }//move randomly around the field
+    void CheckActionPoints()
+    {
+        if(ActionPoints < 1)
+        {
+            canMove = false;
+            combatManager.AnnounceTurnEnd();//announce the end of the turn to the combat manager.
+        }
+    }
     public void MovementAI()
     {
         int i = 0;
@@ -190,6 +206,7 @@ public class Enemy : MonoBehaviour
 
     public void GenerateTurnDecisions()
     {
+        ActionPoints = EnemyProfile.MyStats.ActionPoints;
         if (EnemyProfile.HuntsPlayers)
         {
             if(Tracking != null)
@@ -205,6 +222,7 @@ public class Enemy : MonoBehaviour
                 int p = Random.Range(0, combatManager.PlayerCombatants.Length);
                 Tracking = combatManager.PlayerCombatants[p].gameObject;
             }
+            canMove = true;
             selectedattack = Random.Range(0, combatManager.Ark.WeaponList[EnemyProfile.Weapon].SkillList.Length);
 
         }//if there's no enemy set or the enemy set is dead, change to a random set enemy. Then select a random attack from the list and go forward with it. 
