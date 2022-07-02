@@ -30,13 +30,18 @@ public class TempTestAbilityScript : MonoBehaviour
 
         if(enex != null)
         {
-            if (MyProfile.Magic)
+            if (MyProfile.SetTeam != enex.Team)
             {
-                enex.TakeDamage(MyProfile.Power + MyProfile.MagicAttack, MyProfile.Magic, MyProfile.AttributesCarried);
-            }
-            else
-            {
-                enex.TakeDamage(MyProfile.Power + MyProfile.PhysicalAttack, MyProfile.Magic, MyProfile.AttributesCarried);
+
+
+                if (MyProfile.Magic)
+                {
+                    enex.TakeDamage(MyProfile.Power + MyProfile.MagicAttack, MyProfile.Magic, MyProfile.AttributesCarried);
+                }
+                else
+                {
+                    enex.TakeDamage(MyProfile.Power + MyProfile.PhysicalAttack, MyProfile.Magic, MyProfile.AttributesCarried);
+                }
             }
         }
         

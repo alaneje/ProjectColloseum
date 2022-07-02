@@ -7,7 +7,9 @@ public class CombatProfile : MonoBehaviour
     [Header("Basic Information")]
     public string Name;
     public int StatGroup;
+    public CombatAbilityProfile.Team Team;
     public Stats MyStats;
+    public bool HuntsPlayers;//enemy only
     public Archive.Attribute[] PositiveAttribute;
     public Archive.Attribute[] NegativeAttribute;
     [Header("Equipment")]
