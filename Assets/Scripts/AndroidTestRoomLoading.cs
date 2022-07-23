@@ -14,6 +14,12 @@ public class AndroidTestRoomLoading : MonoBehaviour
             SceneManager.LoadSceneAsync(ScenenNumber, LoadSceneMode.Additive);
             
         }
+
+        if (Application.platform == RuntimePlatform.OSXPlayer)
+        {
+            SceneManager.LoadSceneAsync(ScenenNumber, LoadSceneMode.Additive);
+
+        }
     }
 
     // Update is called once per frame

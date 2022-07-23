@@ -151,6 +151,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1474914345}
   m_RootOrder: 8
@@ -169,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: {x: 0, y: 0}
   Magic: {x: 0, y: 0}
+  ActionPoints: 5
   Attack: 0
   Resonance: 0
   Defence: 0
@@ -190,7 +192,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   StatGroup: 0
+  Team: 0
   MyStats: {fileID: 168741820}
+  HuntsPlayers: 0
   PositiveAttribute: 
   NegativeAttribute: 
   Weapon: 0
@@ -222,6 +226,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1474914345}
   m_RootOrder: 9
@@ -240,6 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: {x: 0, y: 0}
   Magic: {x: 0, y: 0}
+  ActionPoints: 5
   Attack: 0
   Resonance: 0
   Defence: 0
@@ -261,7 +267,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   StatGroup: 0
+  Team: 0
   MyStats: {fileID: 248349576}
+  HuntsPlayers: 0
   PositiveAttribute: 
   NegativeAttribute: 
   Weapon: 0
@@ -293,6 +301,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1474914345}
   m_RootOrder: 6
@@ -311,6 +320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: {x: 0, y: 0}
   Magic: {x: 0, y: 0}
+  ActionPoints: 5
   Attack: 0
   Resonance: 0
   Defence: 0
@@ -332,7 +342,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   StatGroup: 0
+  Team: 0
   MyStats: {fileID: 367503041}
+  HuntsPlayers: 0
   PositiveAttribute: 
   NegativeAttribute: 
   Weapon: 0
@@ -364,6 +376,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1474914345}
   m_RootOrder: 1
@@ -382,7 +395,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Derek
   StatGroup: 0
+  Team: 0
   MyStats: {fileID: 611041817}
+  HuntsPlayers: 0
   PositiveAttribute: 0700000008000000
   NegativeAttribute: 0100000005000000
   Weapon: 0
@@ -400,6 +415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: {x: 69, y: 69}
   Magic: {x: 0, y: 0}
+  ActionPoints: 5
   Attack: 62
   Resonance: 20
   Defence: 20
@@ -435,6 +451,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1474914345}
   m_RootOrder: 0
@@ -453,7 +470,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Gareth
   StatGroup: 0
+  Team: 0
   MyStats: {fileID: 709813715}
+  HuntsPlayers: 0
   PositiveAttribute: 0700000008000000
   NegativeAttribute: 0100000005000000
   Weapon: 0
@@ -471,6 +490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: {x: 69, y: 69}
   Magic: {x: 0, y: 0}
+  ActionPoints: 5
   Attack: 62
   Resonance: 20
   Defence: 20
@@ -506,6 +526,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1474914345}
   m_RootOrder: 7
@@ -524,6 +545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: {x: 0, y: 0}
   Magic: {x: 0, y: 0}
+  ActionPoints: 5
   Attack: 0
   Resonance: 0
   Defence: 0
@@ -545,7 +567,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   StatGroup: 0
+  Team: 0
   MyStats: {fileID: 715652334}
+  HuntsPlayers: 0
   PositiveAttribute: 
   NegativeAttribute: 
   Weapon: 0
@@ -577,6 +601,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1474914345}
   m_RootOrder: 2
@@ -595,6 +620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: {x: 0, y: 0}
   Magic: {x: 0, y: 0}
+  ActionPoints: 5
   Attack: 0
   Resonance: 0
   Defence: 0
@@ -616,7 +642,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   StatGroup: 0
+  Team: 0
   MyStats: {fileID: 765881136}
+  HuntsPlayers: 0
   PositiveAttribute: 
   NegativeAttribute: 
   Weapon: 0
@@ -648,6 +676,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1474914345}
   m_Father: {fileID: 0}
@@ -718,7 +747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c002f18b49d454c8bcd1f09fcfb435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerCombatants: 0000000001000000
+  PlayerCombatants: 000000000100000001000000
   EnemyCombatants: 000000000000000000000000
   Home: LoadIntoScene
 --- !u!1 &1359328221
@@ -749,6 +778,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1474914345}
   m_RootOrder: 3
@@ -767,7 +797,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   StatGroup: 0
+  Team: 0
   MyStats: {fileID: 1359328225}
+  HuntsPlayers: 0
   PositiveAttribute: 
   NegativeAttribute: 
   Weapon: 0
@@ -785,6 +817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: {x: 0, y: 0}
   Magic: {x: 0, y: 0}
+  ActionPoints: 5
   Attack: 0
   Resonance: 0
   Defence: 0
@@ -818,6 +851,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 709813713}
   - {fileID: 611041815}
@@ -860,6 +894,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1474914345}
   m_RootOrder: 4
@@ -878,6 +913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: {x: 0, y: 0}
   Magic: {x: 0, y: 0}
+  ActionPoints: 5
   Attack: 0
   Resonance: 0
   Defence: 0
@@ -899,7 +935,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   StatGroup: 0
+  Team: 0
   MyStats: {fileID: 1794179347}
+  HuntsPlayers: 0
   PositiveAttribute: 
   NegativeAttribute: 
   Weapon: 0
@@ -931,6 +969,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1474914345}
   m_RootOrder: 5
@@ -949,6 +988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: {x: 0, y: 0}
   Magic: {x: 0, y: 0}
+  ActionPoints: 5
   Attack: 0
   Resonance: 0
   Defence: 0
@@ -970,7 +1010,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   StatGroup: 0
+  Team: 0
   MyStats: {fileID: 1827963605}
+  HuntsPlayers: 0
   PositiveAttribute: 
   NegativeAttribute: 
   Weapon: 0
@@ -1003,7 +1045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7947567802ce52d4fba98aacfada0549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScenenNumber: 1
+  ScenenNumber: 3
 --- !u!4 &1834397207
 Transform:
   m_ObjectHideFlags: 0
@@ -1014,6 +1056,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1

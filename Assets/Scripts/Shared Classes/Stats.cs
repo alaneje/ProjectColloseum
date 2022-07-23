@@ -77,7 +77,7 @@ public class Stats : MonoBehaviour
         returnedstats.Accuracy = Random.Range(matrix[SetNumber, 7].x, matrix[SetNumber, 7].y);//7 links to accuracy
 
         returnedstats.Speed = Random.Range(matrix[SetNumber, 8].x, matrix[SetNumber, 8].y);//8 links to speed
-
+        ActionPoints = 3;
 
         return returnedstats;
     }//Builds stats.

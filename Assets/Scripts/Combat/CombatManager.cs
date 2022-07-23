@@ -22,7 +22,7 @@ public class CombatManager : MonoBehaviour
     public int CurrentTurn;
 
     [Header("MiscObjects")]
-    public GameObject TargetingArrow;
+   // public GameObject TargetingArrow;
     public GameObject CombatUIPannel;
     public GameObject GameOverScreen;
     public GameObject VictoryScreen;
@@ -91,21 +91,36 @@ public class CombatManager : MonoBehaviour
 
 
         int i = 0;
-        while(i != AbilityButtons.Length)
+        if (PlayerTurn)
         {
-            if(i !<= Ark.WeaponList[PlayerCombatants[CurrentPlayer].MyProfile.Weapon].SkillList.Length - 1)
+            while (i != AbilityButtons.Length)
             {
-                int A = Ark.WeaponList[PlayerCombatants[CurrentPlayer].MyProfile.Weapon].SkillList[i];//Get ability number from the list
-                AbilityButtons[i].interactable = true;
-                AbilityButtonText[i].text = Ark.CombatAbilities[A].AbilityName;
+                if (i! <= Ark.WeaponList[PlayerCombatants[CurrentPlayer].MyProfile.Weapon].SkillList.Length - 1)
+                {
+                    int A = Ark.WeaponList[PlayerCombatants[CurrentPlayer].MyProfile.Weapon].SkillList[i];//Get ability number from the list
+                    AbilityButtons[i].interactable = true;
+                    AbilityButtonText[i].text = Ark.CombatAbilities[A].AbilityName;
+                }
+                else
+                {
+                    AbilityButtons[i].interactable = false;
+                    AbilityButtonText[i].text = "";
+                }
+                i++;
             }
-            else
-            {
-                AbilityButtons[i].interactable = false;
-                AbilityButtonText[i].text = "";
-            }
-            i++;
         }
+        else
+        {
+            while (i != AbilityButtons.Length)
+            {
+               
+                
+             AbilityButtons[i].interactable = false;
+             AbilityButtonText[i].text = "";
+             i++;
+            }
+        }
+       
     }
 
     void MovementButtonUpdates()
@@ -145,36 +160,7 @@ public class CombatManager : MonoBehaviour
         
     }
 
-    void TurnUpdates()
-    {
-        if(CurrentTurnPhase == TurnPahses.PreTurn) { EndPreTurnPhase(); }
-        if(CurrentTurnPhase == TurnPahses.TurnAbility && !InTurnAbilityLock) { GenerateTurnAbility(); }
-    }
 
-    void StartTurns()
-    {
-        SetEnemyDecisions();//Generate enemy decisions
-        CurrentTurn = 0; //Set the current turn to 0.
-        GenerateTurnOrder();
-        CurrentTurnPhase = TurnPahses.PreTurn;//Set the current turn phase to preturn.
-        InTurnGameplay = true;
-    }
-
-    void SetEnemyDecisions()
-    {
-        int i = 0;
-
-        while (i != Enemies.Length)
-        {
-            Enemies[i].GenerateTurnDecisions();
-            i++;
-        }//Genereate the turn decisions.
-    }
-
-    void EndPreTurnPhase()
-    {
-        CurrentTurnPhase = TurnPahses.TurnAbility;
-    }
 
     void BeginPostTurn()
     {
@@ -224,14 +210,6 @@ public class CombatManager : MonoBehaviour
         
     }
 
-    void TargettingArrowPositionUpdate()
-    {
-        TargetingArrow.transform.position = new Vector3(Enemies[CurrentTarget].gameObject.transform.position.x, TargetingArrow.transform.position.y, Enemies[CurrentTarget].gameObject.transform.position.z);
-        PlayerCombatants[CurrentPlayer].Submission.Target = Enemies[CurrentTarget].gameObject; 
-     
-
-      
-    }//Updates where the targetting arrow is positioned based on the current target.
 
     void GenerateEnemyList()
     {
@@ -288,15 +266,6 @@ public class CombatManager : MonoBehaviour
 
     }
 
-    void GenerateTurnAbility()
-    {       
-        CombatAbilityProfile A = Instantiate(Ark.CombatAbilities[TurnCombatants[CurrentTurn].AbilityNumber].gameObject, TurnCombatants[CurrentTurn].Target.transform.position,Quaternion.identity).GetComponent<CombatAbilityProfile>();
-        A.PhysicalAttack = TurnCombatants[CurrentTurn].gameObject.GetComponent<CombatProfile>().MyStats.Attack;
-        A.MagicAttack = TurnCombatants[CurrentTurn].gameObject.GetComponent<CombatProfile>().MyStats.Resonance;
-        A.AttributesCarried = TurnCombatants[CurrentTurn].gameObject.GetComponent<CombatProfile>().PositiveAttribute;
-
-        InTurnAbilityLock = true;
-    }//spawns the ability object on the current target of whoevers turn it is.
 
     void EndOfTurn()
     {
@@ -350,6 +319,7 @@ public class CombatManager : MonoBehaviour
                 CX.PositiveAttribute = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].PositiveAttribute;
                 CX.NegativeAttribute = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].NegativeAttribute;
                 CX.Weapon = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].Weapon;
+                CX.MyStats.ActionPoints = Ark.EnemyCombatants[CS.EnemyCombatants[EnemiesBuilt]].MyStats.ActionPoints;
 
                 //Add Weapon Stats
                 CX.MyStats.Health += Ark.WeaponList[CX.Weapon].WeaponStats.Health;
@@ -399,6 +369,7 @@ public class CombatManager : MonoBehaviour
                 CX.PositiveAttribute = Ark.Combatants[CS.PlayerCombatants[i]].PositiveAttribute;
                 CX.NegativeAttribute = Ark.Combatants[CS.PlayerCombatants[i]].NegativeAttribute;
                 CX.Weapon = Ark.Combatants[CS.PlayerCombatants[i]].Weapon;
+                CX.MyStats.ActionPoints = Ark.Combatants[CS.PlayerCombatants[i]].MyStats.ActionPoints;
 
                 //Add Weapon Stats
                 CX.MyStats.Health += Ark.WeaponList[CX.Weapon].WeaponStats.Health;
@@ -457,9 +428,7 @@ public class CombatManager : MonoBehaviour
         {
             Selected.Position = Selected.Position + Var[Pos];//Move character
             PlayerCombatants[CurrentPlayer].UseActionPoint();
-        }
-        
-
+        }        
     }
 
     public void AnnounceTurnEnd()
