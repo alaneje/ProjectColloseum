@@ -15,6 +15,7 @@ public class CombatManager : MonoBehaviour
     public Enemy[] Enemies;
     public CombatantTurnSubmission[] TurnCombatants;
     public bool TimeActive;
+    public bool PlayerTurn;
     public int CurrentPlayer;
     public int CurrentTarget;
    // public int CurrentStackPos;
@@ -52,7 +53,8 @@ public class CombatManager : MonoBehaviour
         BuildPlayerCombatants();
         GeneratePlayerList();
         EnemyCreator();
-
+        CurrentTurn = -1;
+        AnnounceTurnEnd();
         
     }
 
@@ -101,22 +103,37 @@ public class CombatManager : MonoBehaviour
     {
         GridActor Selected = PlayerCombatants[CurrentPlayer].gameObject.GetComponent<GridActor>();
         bool CanMove = Selected.GetInPosition();
-        int i = 0;
-        while(i != MovementButtons.Length)
+        if (PlayerTurn)
         {
-            if(CanMove && Selected.GetCanMove(i))
+            int i = 0;
+            while (i != MovementButtons.Length)
             {
-                MovementButtons[i].interactable = true;
-            }
-            else
-            {
-                MovementButtons[i].interactable = false;
+                if (CanMove && Selected.GetCanMove(i))
+                {
+                    MovementButtons[i].interactable = true;
+                }
+                else
+                {
+                    MovementButtons[i].interactable = false;
 
-                
+
+                }
+
+                i++;
             }
-            
-            i++;
         }
+        else
+        {
+            int i = 0;
+            while (i != MovementButtons.Length)
+            {
+                
+                    MovementButtons[i].interactable = false;
+
+                i++;
+            }
+        }
+        
     }
 
     void TurnUpdates()
@@ -436,9 +453,11 @@ public class CombatManager : MonoBehaviour
         Var[3] = Vector2Int.right;
 
         GridActor Selected = PlayerCombatants[CurrentPlayer].gameObject.GetComponent<GridActor>();
+        
         if (Selected.GetInPosition() && Selected.GetCanMove(Pos))
         {
             Selected.Position = Selected.Position + Var[Pos];//Move character
+            PlayerCombatants[CurrentPlayer].UseActionPoint();
         }
         
 
@@ -446,7 +465,33 @@ public class CombatManager : MonoBehaviour
 
     public void AnnounceTurnEnd()
     {
-
+        GenerateTurnOrder();
+        CurrentTurn++;
+        if(CurrentTurn == TurnCombatants.Length) { CurrentTurn = 0; }
+            if (TurnCombatants[CurrentTurn].gameObject.tag == "Enemy")
+        {
+            Enemy enemy = TurnCombatants[CurrentTurn].gameObject.GetComponent<Enemy>();
+            enemy.GenerateTurnDecisions();
+            PlayerTurn = false;
+        }
+        if (TurnCombatants[CurrentTurn].gameObject.tag == "Player")
+        {
+            CombatPlayer combatPlayer = TurnCombatants[CurrentTurn].gameObject.GetComponent<CombatPlayer>();
+            combatPlayer.StartTurn();
+            int i = 0;
+            while(i != PlayerCombatants.Length)
+            {
+                if(PlayerCombatants[i] == combatPlayer)
+                {
+                    break;
+                }
+                i++;
+            }
+            CurrentPlayer = i;
+            PlayerTurn = true;
+        }
+        
+       
     }
     public void StopTime()
     {

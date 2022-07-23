@@ -15,10 +15,10 @@ public class Enemy : MonoBehaviour
     public float MagF;
 
     int selectedattack;
-    int ActionPoints = 3;
+    int ActionPoints;
     float RangefromEnemy;
     bool notinRangeOfSelectedAttack;
-    bool canMove = true;
+    bool canMove;
     // Start is called before the first frame update
     void Start()
     {
@@ -143,8 +143,12 @@ public class Enemy : MonoBehaviour
     {
         if(ActionPoints < 1)
         {
+            if (canMove)
+            {
+                combatManager.AnnounceTurnEnd();//announce the end of the turn to the combat manager.
+
+            }//Ensures it only fires once. 
             canMove = false;
-            combatManager.AnnounceTurnEnd();//announce the end of the turn to the combat manager.
         }
     }
     public void MovementAI()
