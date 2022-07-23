@@ -282,18 +282,8 @@ public class CombatManager : MonoBehaviour
 
     public void UseAbility(int ButtonNumber)
     {
-        PlayerCombatants[CurrentPlayer].Submission.AbilityNumber = 0;
-        PlayerCombatants[CurrentPlayer].Submission.Target = Enemies[CurrentTarget].gameObject;
 
-        if((CurrentPlayer + 1) == PlayerCombatants.Length)
-        {
-            StartTurns();
-        }
-        else
-        {
-            CurrentPlayer++;
-        }
-      //  Maya.Stacks[CurrentStackPos].Selected = true;
+        PlayerCombatants[CurrentPlayer].GenerateAttack(ButtonNumber);
         
 
     }

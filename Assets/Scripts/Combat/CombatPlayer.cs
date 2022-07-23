@@ -45,6 +45,17 @@ public class CombatPlayer : MonoBehaviour
         }
     }
 
+    public void GenerateAttack(int buttonNumber)
+    {
+        ActionPoints--;
+        int Ab = CombatManager.Ark.WeaponList[MyProfile.Weapon].SkillList[buttonNumber];
+        CombatAbilityProfile A = Instantiate(CombatManager.Ark.CombatAbilities[Ab].gameObject, this.gameObject.transform.position, Quaternion.identity).GetComponent<CombatAbilityProfile>();
+        A.SetTeam = CombatAbilityProfile.Team.Player;
+        A.PhysicalAttack = MyProfile.MyStats.Attack;
+        A.MagicAttack = MyProfile.MyStats.Resonance;
+        A.AttributesCarried = MyProfile.PositiveAttribute;
+    }
+
     public void StartTurn()
     {
         ActionPoints = MyProfile.MyStats.ActionPoints;
