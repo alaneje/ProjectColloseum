@@ -685,6 +685,7 @@ MonoBehaviour:
   Enemies: []
   TurnCombatants: []
   TimeActive: 1
+  PlayerTurn: 0
   CurrentPlayer: 0
   CurrentTarget: 0
   CurrentTurn: 0
@@ -2804,7 +2805,7 @@ MonoBehaviour:
   StatGroup: 0
   Team: 1
   MyStats: {fileID: 888132427}
-  HuntsPlayers: 0
+  HuntsPlayers: 1
   PositiveAttribute: 
   NegativeAttribute: 
   Weapon: 0
@@ -5102,7 +5103,7 @@ MonoBehaviour:
   StatGroup: 0
   Team: 1
   MyStats: {fileID: 1310490947}
-  HuntsPlayers: 0
+  HuntsPlayers: 1
   PositiveAttribute: 
   NegativeAttribute: 
   Weapon: 0
@@ -5450,7 +5451,7 @@ MonoBehaviour:
   StatGroup: 0
   Team: 1
   MyStats: {fileID: 1618654751}
-  HuntsPlayers: 0
+  HuntsPlayers: 1
   PositiveAttribute: 
   NegativeAttribute: 
   Weapon: 0
@@ -5777,7 +5778,7 @@ MonoBehaviour:
   StatGroup: 0
   Team: 1
   MyStats: {fileID: 1689474999}
-  HuntsPlayers: 0
+  HuntsPlayers: 1
   PositiveAttribute: 
   NegativeAttribute: 
   Weapon: 0
@@ -6051,7 +6052,7 @@ MonoBehaviour:
   StatGroup: 0
   Team: 1
   MyStats: {fileID: 1692480765}
-  HuntsPlayers: 0
+  HuntsPlayers: 1
   PositiveAttribute: 
   NegativeAttribute: 
   Weapon: 0
@@ -6445,7 +6446,7 @@ MonoBehaviour:
   StatGroup: 0
   Team: 1
   MyStats: {fileID: 1753049833}
-  HuntsPlayers: 0
+  HuntsPlayers: 1
   PositiveAttribute: 
   NegativeAttribute: 
   Weapon: 0
@@ -6919,7 +6920,7 @@ MonoBehaviour:
   StatGroup: 0
   Team: 1
   MyStats: {fileID: 2019462717}
-  HuntsPlayers: 0
+  HuntsPlayers: 1
   PositiveAttribute: 
   NegativeAttribute: 
   Weapon: 0

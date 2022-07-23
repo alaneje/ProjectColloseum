@@ -73,6 +73,15 @@ public class CombatManager : MonoBehaviour
 
         CombatUI();
         MovementButtonUpdates();
+        CombatTurnOverloadCheck();
+    }
+
+    void CombatTurnOverloadCheck()
+    {
+        if(CurrentTurn >= TurnCombatants.Length)
+        {
+            EndOfTurn();
+        }
     }
 
     void CombatUI()
@@ -467,7 +476,7 @@ public class CombatManager : MonoBehaviour
     {
         GenerateTurnOrder();
         CurrentTurn++;
-        if(CurrentTurn == TurnCombatants.Length) { CurrentTurn = 0; }
+        if(CurrentTurn >= TurnCombatants.Length) { CurrentTurn = 0; }
             if (TurnCombatants[CurrentTurn].gameObject.tag == "Enemy")
         {
             Enemy enemy = TurnCombatants[CurrentTurn].gameObject.GetComponent<Enemy>();
