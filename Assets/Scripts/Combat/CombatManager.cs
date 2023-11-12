@@ -172,7 +172,7 @@ public class CombatManager : MonoBehaviour
 
     void TargettingArrowPositionUpdate()
     {
-        TargetingArrow.transform.position = new Vector3(Enemies[CurrentTarget].gameObject.transform.position.x, TargetingArrow.transform.position.y, Enemies[CurrentTarget].gameObject.transform.position.z);
+        TargetingArrow.transform.position = Enemies[CurrentTarget].transform.position;
         PlayerCombatants[CurrentPlayer].Submission.Target = Enemies[CurrentTarget].gameObject; 
      
 
